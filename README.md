@@ -1,4 +1,19 @@
+# Frontend Mentor - Designo agency website solution
+
+This is a solution to the [Designo agency website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/designo-multipage-website-G48K6rfUT). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+
+## Tech stack 
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Tailwind CSS
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+
 
 ## Getting Started
 
