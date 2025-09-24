@@ -13,7 +13,7 @@ export default function Home() {
           height={38}
           priority
         /> */}
-        
+        MAIN
         
       </main>
       <footer className={styles.footer}>
