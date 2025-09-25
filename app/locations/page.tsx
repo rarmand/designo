@@ -1,12 +1,12 @@
 import styles from "../page.module.css";
 
 
-export default function Home() {
-    return (
+export default function Locations() {
+  return (
         <div className={styles.page}>
             <main className={styles.main}>
 
-                HOME    
+                LOCATIONS
             </main>
         </div>
     );
