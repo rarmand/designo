@@ -3,7 +3,8 @@
 _Favicon.ico_ is found by NextJS setup by default, on the level of _app_ folder. We can also use _.png_ format.
 
 You can add _icon_ to metadata and keep icons in _public_ folder.
-____
+
+---
 
 #### middleware.ts
 
