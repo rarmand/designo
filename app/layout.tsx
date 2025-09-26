@@ -1,16 +1,11 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Jost } from 'next/font/google';
 import '../styles/globals.scss';
 import Header from '@/components/Header';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const jost = Jost({
   subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+  weight: '400',
 });
 
 export const metadata: Metadata = {
@@ -35,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${jost.className}`}>
         <Header />
         {children}
       </body>
