@@ -1,6 +1,6 @@
 // style globalne importowane do layout
 // @use 'variables';
-@import './variables';
+@use 'variables';
 
 :root {
   --background: #ffffff;
@@ -35,7 +35,7 @@ body {
 }
 
 a {
-  color: $primary-color-400;
+  color: variables.$primary-color-400;
   text-decoration: none;
 }
 
