@@ -1,3 +1,6 @@
+// style globalne importowane do layout
+@use 'variables';
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -31,7 +34,7 @@ body {
 }
 
 a {
-  color: inherit;
+  color: variables.$primaryColor;
   text-decoration: none;
 }
 
