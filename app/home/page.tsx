@@ -1,19 +1,15 @@
 import styles from '../page.module.css';
+import text from '../../i18n/en.json';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        
-        HOME
-        <div className='description'>
-          <h1>Award-winning custom designs and digital branding solutions</h1>
-          <p>With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, 
-  and engaging brand experiences. Find out more about our services.</p>
-  
-          <button>Learn more</button>
-        </div>
-        </main>
-    </div>
+    <main className='home main'>
+      <div className='description'>
+        <h1>{text['home.title']}</h1>
+        <p>{text['home.description']}</p>
+
+        <button>{text['home.button']}</button>
+      </div>
+    </main>
   );
 }

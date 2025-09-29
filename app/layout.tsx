@@ -2,16 +2,17 @@ import type { Metadata } from 'next';
 import { Jost } from 'next/font/google';
 import '../styles/globals.scss';
 import Header from '@/components/Header';
+import text from '../i18n/en.json';
 
 const jost = Jost({
   subsets: ['latin'],
   weight: '400',
 });
 
+// TODO: config of i18n lib
 export const metadata: Metadata = {
-  title: 'Frontend Mentor | Designo Agency Website Challenge',
-  description:
-    'Designo agency focused on a delivery of the best experience to you.',
+  title: text['website.title'],
+  description: text['website.description'],
 };
 
 /*
