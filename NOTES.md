@@ -37,3 +37,20 @@ Jeśli font nalezy do Google, mozna przekazac NextJS operacje pobierania i hosto
 Jeśli chcemy trzymać lokalnie, wtedy trzeba pobrać font do projektu i odpowiednio go pobrać do layoutu.
 
 Optymalniej uzywac NextJS pobierającego Google font, bo z reguly strona internetowa będzie działać tylko gdy działa internet.
+
+#### i18n 
+> https://dev.to/antoniojuniordev/how-to-implement-internationalization-i18n-in-a-nextjs-project-without-changing-the-url-1g70
+
+#### BEM
+
+Block Element Modifier
+
+> https://getbem.com/
+> https://kostyrko.github.io/zfrontu/html-konwencje-klas.html
+> https://piecioshka.pl/blog/2017/05/11/czym-jest-dla-mnie-bem.html
+
+Methodology of naming HTML elements to use CSS properly.
+
+Block - standalone entity that is meaningful on its own.
+Element - a part of a block that has no standalone meaning and is semantically tied to its block.
+Modifier - a flag on a block or element. Use them to change appearance or behavior.
