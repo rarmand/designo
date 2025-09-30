@@ -1,6 +1,7 @@
 // import Link from 'next/link';
 // 'use client';
 
+import styles from './Header.module.scss';
 import Image from 'next/image';
 
 export default function Header() {
@@ -11,8 +12,10 @@ export default function Header() {
 
   // TODO: rózne logo w zalezności od view mode
   // TODO: jak ustawić ze hamburger pojawia się tylko gdy jest mobile
+  // TODO: nadać RWD
+  // BEM - block element modifier
   return (
-    <header>
+    <header className={styles.header}>
       <Image src='/logo-dark.png' alt='designo logo' width={200} height={27} />
       <Image
         src='/mobile/icon-hamburger.svg'
