@@ -1,9 +1,10 @@
 // import Link from 'next/link';
 'use client';
 
+// import Link from 'next/link';
 import styles from './Header.module.scss';
 import Image from 'next/image';
-import text from '../i18n/en.json';
+// import text from '../i18n/en.json';
 import { useState } from 'react';
 
 export default function Header() {
@@ -19,6 +20,11 @@ export default function Header() {
     // this.open = !open;
   };
 
+  /*
+  - stworzyć rozmieszczenie logo i headera
+  - opracować funkcje reagujące poprawnie na kliknięcie - onClick
+  - napiasnie poprawnie funkcji z useState 
+  */
   return (
     <header className={styles.header}>
       <div className={styles.header__main}>
