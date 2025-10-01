@@ -1,7 +1,6 @@
 // import Link from 'next/link';
 'use client';
 
-import Link from 'next/link';
 import styles from './Header.module.scss';
 import Image from 'next/image';
 import text from '../i18n/en.json';
@@ -23,31 +22,20 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.header__main}>
-        <button onClick={onLogoClick} type='button' aria-label='Click the icon'>
-          <Image
-            src='/logo-dark.png'
-            alt={text['header.logo.alt']}
-            width={200}
-            height={27}
-          />
+        <button onClick={onLogoClick} type='button'>
+          <Image src='/logo-dark.png' alt='' width={200} height={27} />
         </button>
-        <button
-          onClick={onMenuButtonClick}
-          type='button'
-          // aria-label='Click the menu icon'
-          //aria-controls='primary-navigation'
-        >
+        <button onClick={onMenuButtonClick} type='button'>
           <Image
             src='/mobile/icon-hamburger.svg'
-            alt={text['header.hamburger.alt']}
+            alt=''
             width={20}
             height={20}
           />
         </button>
       </div>
 
-      
-      <nav className={styles.header__menu}>
+      {/* <nav className={styles.header__menu}>
         <ul id='primary-navigation' className='primary-navigation'>
           <li>
             <Link href='/about' aria-label='About our company'>
@@ -67,7 +55,7 @@ export default function Header() {
             </Link>
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </header>
   );
 }
