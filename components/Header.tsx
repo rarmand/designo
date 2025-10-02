@@ -25,10 +25,10 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.header__main}>
-        <button onClick={onLogoClick} type='button'>
+        <button className={styles.header__button} onClick={onLogoClick} type='button'>
           <Image src='/logo-dark.png' alt='' width={200} height={27}/>
         </button>
-        <button onClick={onMenuButtonClick} type='button'>
+        <button className={styles.header__button} onClick={onMenuButtonClick} type='button'>
           <Image
             src='/mobile/icon-hamburger.svg'
             alt=''
