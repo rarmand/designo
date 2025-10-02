@@ -70,13 +70,17 @@ Próba użycia `this.var` jest błędna i nie działa poza klasami lub nieprawid
 const [open, setOpen] = useState(false);
 const onMenuButtonClick = () => setOpen(!open);
 ...
-const onMenuButtonClick = () => setOpen(open => !open); // for fast env
+const onMenuButtonClick = () => setOpen(open => !open); // callback
 ```
 
 - dla prostych kliknięć, pojedynczych akcji – bez różnicy, oba działają.
 - przy operacjach konkurencyjnych, sekwencji wywołań, callbackach, asynchronicznych akcjach – zawsze użyj wersji funkcyjnej (`setOpen(open => !open)`), bo masz gwarancję pracy na najnowszym stanie
 
+> https://pl.typeofweb.com/react-hooks-usestate-wiele-stanow-callbacki-i-inne-niuanse
+
 #### Routing in NextJS
 
 Routing depends on the side of the website.
-Different libs for client-side and server-side rendering.
+Different libs for client-side and server-side rendering. Another method for page routing, another for app routing.
+
+> https://nextjs.org/docs/app/guides/migrating/app-router-migration
