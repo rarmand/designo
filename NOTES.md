@@ -63,7 +63,7 @@ Modifier - a flag on a block or element. Use them to change appearance or behavi
 W komponencie funkcyjnym nie ma odwołań do variables za pomocą `this`.
 Obsługę stanu variable wykonuje się poprzez `useState`.
 
-W Reactowych komponentach funkcyjnych należy obsługiwać stan przez `useState`. 
+W Reactowych komponentach funkcyjnych należy obsługiwać stan przez `useState`.
 Próba użycia `this.var` jest błędna i nie działa poza klasami lub nieprawidłowym kontekstem.
 
 ```
