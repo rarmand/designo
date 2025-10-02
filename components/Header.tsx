@@ -16,21 +16,21 @@ export default function Header() {
 
   const onLogoClick = () => {};
 
-  const onMenuButtonClick = () => {
-    // this.open = !open;
-  };
+  const onMenuButtonClick = () => setOpen(open => !open);
 
   /*
   - stworzyć rozmieszczenie logo i headera
   - opracować funkcje reagujące poprawnie na kliknięcie - onClick
   - napiasnie poprawnie funkcji z useState 
+  - problemy z pobieraniem css z variables - jak to w koncu ma działać?
   */
   return (
     <header className={styles.header}>
       <div className={styles.header__main}>
         <button onClick={onLogoClick} type='button'>
-          <Image src='/logo-dark.png' alt='' width={200} height={27} />
+          <Image src='/logo-dark.png' alt='' width={200} height={27}/>
         </button>
+        {open ? <p>ues</p> : <p>no</p>}
         <button onClick={onMenuButtonClick} type='button'>
           <Image
             src='/mobile/icon-hamburger.svg'

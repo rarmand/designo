@@ -1,8 +1,8 @@
 #### favicon
 
-_Favicon.ico_ is found by NextJS setup by default, on the level of _app_ folder. We can also use _.png_ format.
+`Favicon.ico` is found by NextJS setup by default, on the level of `app` folder. We can also use `.png` format.
 
-You can add _icon_ to metadata and keep icons in _public_ folder.
+You can add `icon` to metadata and keep icons in `public` folder.
 
 ---
 
@@ -12,23 +12,23 @@ You can add _icon_ to metadata and keep icons in _public_ folder.
 
 Middleware allows you to run code before a request is completed. Then, based on the incoming request, you can modify the response by rewriting, redirecting, modifying the request or response headers, or responding directly.
 
-Here, used to redirection from '/' to '/home'.
+Here, used to redirection from `/` to `/home`.
 
 #### Prettier
 
 Narzędzie, które dba o wygląd kodu, zeby był taki sam w całym projekcie.
-Upiększa go wg ustawień w _.prettierrc_.
+Upiększa go wg ustawień w `.prettierrc`.
 
 #### SASS
 
 Instalacja SASSa jest ułatwiona, mozna tworzyć zestaw styli w folderze /styles albo jako osobne moduły dla kazdego page'a i component'u.
 
-Mozna tworzyć częściowe pliki .scss, które są potem importowane lub uzywane w publicznym pliku .scss:
-\_ _variables.scss_.
+Mozna tworzyć częściowe pliki .scss, które są potem importowane lub uzywane w publicznym pliku `.scss`:
+`_variables.scss`
 
-_ @import variables_ lub _ @use variables_.
+`@import variables` lub `@use variables`.
 
-Ten ukryty plik jest dostępny dla kazdego pliku .scss niezaleznie od ich połozenia.
+Ten ukryty plik jest dostępny dla kazdego pliku `.scss` niezaleznie od ich połozenia.
 
 #### Fonts
 
@@ -38,7 +38,8 @@ Jeśli chcemy trzymać lokalnie, wtedy trzeba pobrać font do projektu i odpowie
 
 Optymalniej uzywac NextJS pobierającego Google font, bo z reguly strona internetowa będzie działać tylko gdy działa internet.
 
-#### i18n 
+#### i18n
+
 > https://dev.to/antoniojuniordev/how-to-implement-internationalization-i18n-in-a-nextjs-project-without-changing-the-url-1g70
 
 #### BEM
@@ -54,3 +55,23 @@ Methodology of naming HTML elements to use CSS properly.
 Block - standalone entity that is meaningful on its own.
 Element - a part of a block that has no standalone meaning and is semantically tied to its block.
 Modifier - a flag on a block or element. Use them to change appearance or behavior.
+
+!! mozna stworzyć skrypt tworzenia nowego komponentu client-side i server-side z CLI
+
+#### JS functions
+
+W komponencie funkcyjnym nie ma odwołań do variables za pomocą `this`.
+Obsługę stanu variable wykonuje się poprzez `useState`.
+
+W Reactowych komponentach funkcyjnych należy obsługiwać stan przez `useState`. 
+Próba użycia `this.var` jest błędna i nie działa poza klasami lub nieprawidłowym kontekstem.
+
+```
+const [open, setOpen] = useState(false);
+const onMenuButtonClick = () => setOpen(!open);
+...
+const onMenuButtonClick = () => setOpen(open => !open); // for fast env
+```
+
+- dla prostych kliknięć, pojedynczych akcji – bez różnicy, oba działają.
+- przy operacjach konkurencyjnych, sekwencji wywołań, callbackach, asynchronicznych akcjach – zawsze użyj wersji funkcyjnej (`setOpen(open => !open)`), bo masz gwarancję pracy na najnowszym stanie
