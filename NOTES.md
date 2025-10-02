@@ -75,3 +75,8 @@ const onMenuButtonClick = () => setOpen(open => !open); // for fast env
 
 - dla prostych kliknięć, pojedynczych akcji – bez różnicy, oba działają.
 - przy operacjach konkurencyjnych, sekwencji wywołań, callbackach, asynchronicznych akcjach – zawsze użyj wersji funkcyjnej (`setOpen(open => !open)`), bo masz gwarancję pracy na najnowszym stanie
+
+#### Routing in NextJS
+
+Routing depends on the side of the website.
+Different libs for client-side and server-side rendering.

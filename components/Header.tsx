@@ -1,11 +1,11 @@
-// import Link from 'next/link';
 'use client';
 
-// import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 import styles from './Header.module.scss';
 import Image from 'next/image';
+// import Link from 'next/link';
 // import text from '../i18n/en.json';
-import { useState } from 'react';
 
 export default function Header() {
   // TODO: rózne logo w zalezności od view mode
@@ -13,15 +13,13 @@ export default function Header() {
   // TODO: nadać RWD
   // BEM - block element modifier
   const [open, setOpen] = useState(false);
-
-  const onLogoClick = () => {};
-
+  const router = useRouter();
+  
+  const onLogoClick = () => router.push('/home');
   const onMenuButtonClick = () => setOpen(open => !open);
 
   /*
   - stworzyć rozmieszczenie logo i headera
-  - opracować funkcje reagujące poprawnie na kliknięcie - onClick
-  - napiasnie poprawnie funkcji z useState 
   - problemy z pobieraniem css z variables - jak to w koncu ma działać?
   */
   return (
@@ -30,7 +28,6 @@ export default function Header() {
         <button onClick={onLogoClick} type='button'>
           <Image src='/logo-dark.png' alt='' width={200} height={27}/>
         </button>
-        {open ? <p>ues</p> : <p>no</p>}
         <button onClick={onMenuButtonClick} type='button'>
           <Image
             src='/mobile/icon-hamburger.svg'
