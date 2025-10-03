@@ -22,7 +22,9 @@ export default function Header() {
   const onMenuButtonClick = () => setOpen(open => !open);
 
   /*
-  - zmiana kolorów svg i logo zaleznie od dark i light mode
+  - zmiana kolorów svg i logo zaleznie od dark i light mode - doczytac jak to ma wygladac
+  - jeszcze trzeba dodać cień na main gdy menu jest włączone
+  - zastanowić się KIEDYŚ czy rozbijać to na mniejsze useable komponenty
   - problemy z pobieraniem css z variables - jak to w koncu ma działać?
   */
   return (
