@@ -22,10 +22,7 @@ export default function Header() {
   const onMenuButtonClick = () => setOpen(open => !open);
 
   /*
-  - naprawa wyglądu menu, zeby był zgodny z designem - CSS
-  - pojawianie się menu nad elementami stałymi, na razie menu odsuwa main od headera
   - zmiana kolorów svg i logo zaleznie od dark i light mode
-  - po click na link znika menu
   - problemy z pobieraniem css z variables - jak to w koncu ma działać?
   */
   return (
@@ -59,6 +56,7 @@ export default function Header() {
           <Link
             className={styles.header__link}
             href='/about'
+            onClick={onMenuButtonClick}
             aria-label='About our company'
           >
             {text['header.link.about']}
@@ -67,6 +65,7 @@ export default function Header() {
           <Link
             className={styles.header__link}
             href='/locations'
+            onClick={onMenuButtonClick}
             aria-label='Locations'
           >
             {text['header.link.locations']}
@@ -75,6 +74,7 @@ export default function Header() {
           <Link
             className={styles.header__link}
             href='/contact'
+            onClick={onMenuButtonClick}
             aria-label='Contact'
           >
             {text['header.link.contact']}
