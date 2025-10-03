@@ -8,18 +8,24 @@ import Link from 'next/link';
 import text from '../i18n/en.json';
 
 export default function Header() {
-  // TODO: rózne logo w zalezności od view mode
-  // TODO: jak ustawić ze hamburger pojawia się tylko gdy jest mobile
   // TODO: nadać RWD
   // BEM - block element modifier
   const [open, setOpen] = useState(false);
   const router = useRouter();
 
+  const iconMenuClose = '/mobile/icon-close.svg';
+  const iconMenuOpen = '/mobile/icon-hamburger.svg';
+  const logoDark = '/logo-dark.png';
+  const logoLight = '/logo-light.png';
+
   const onLogoClick = () => router.push('/home');
   const onMenuButtonClick = () => setOpen(open => !open);
 
   /*
-  - stworzyć rozmieszczenie logo i headera
+  - naprawa wyglądu menu, zeby był zgodny z designem - CSS
+  - pojawianie się menu nad elementami stałymi, na razie menu odsuwa main od headera
+  - zmiana kolorów svg i logo zaleznie od dark i light mode
+  - po click na link znika menu
   - problemy z pobieraniem css z variables - jak to w koncu ma działać?
   */
   return (
@@ -30,7 +36,7 @@ export default function Header() {
           onClick={onLogoClick}
           type='button'
         >
-          <Image src='/logo-dark.png' alt='' width={200} height={27} />
+          <Image src={logoDark} alt='' width={200} height={27} />
         </button>
         <button
           className={styles.header__button}
@@ -40,7 +46,7 @@ export default function Header() {
           aria-controls='main-menu'
         >
           <Image
-            src={open ? '/mobile/icon-close.svg' : '/mobile/icon-hamburger.svg'}
+            src={open ? iconMenuClose : iconMenuOpen}
             alt=''
             width={20}
             height={20}
@@ -50,25 +56,29 @@ export default function Header() {
 
       {open && (
         <nav id='main-menu' className={styles.header__menu}>
-          <ul>
-            <li>
-              <Link href='/about' aria-label='About our company'>
-                {text['header.link.about']}
-              </Link>
-            </li>
+          <Link
+            className={styles.header__link}
+            href='/about'
+            aria-label='About our company'
+          >
+            {text['header.link.about']}
+          </Link>
 
-            <li>
-              <Link href='/locations' aria-label='Locations'>
-                {text['header.link.locations']}
-              </Link>
-            </li>
+          <Link
+            className={styles.header__link}
+            href='/locations'
+            aria-label='Locations'
+          >
+            {text['header.link.locations']}
+          </Link>
 
-            <li >
-              <Link href='/contact' aria-label='Contact'>
-                {text['header.link.contact']}
-              </Link>
-            </li>
-          </ul>
+          <Link
+            className={styles.header__link}
+            href='/contact'
+            aria-label='Contact'
+          >
+            {text['header.link.contact']}
+          </Link>
         </nav>
       )}
     </header>
