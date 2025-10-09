@@ -5,7 +5,7 @@ import { useState } from 'react';
 import styles from './Header.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import text from '../i18n/en.json';
+import text from '@/i18n/en.json';
 
 export default function Header() {
   // TODO: nadać RWD
