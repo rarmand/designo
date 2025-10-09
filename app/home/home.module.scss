@@ -1,0 +1,32 @@
+.home {
+    background-color: orange;
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 24;
+    font-size: 15;
+
+  &__introduction {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14;
+  }
+
+  &__header {
+    font-size: 32;
+  }
+
+  &__button {
+    background-color: white;
+    color: black;
+    border-style: none;
+    border-radius: 8;
+    text-transform: uppercase;
+    padding: 1rem;
+    font-weight: bold;
+  }
+}

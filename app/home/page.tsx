@@ -1,15 +1,15 @@
-import styles from '../page.module.css';
+import styles from './home.module.scss';
 import text from '../../i18n/en.json';
 
 export default function Home() {
   return (
-    <main className='home main'>
-      <div className='description'>
-        <h1>{text['home.title']}</h1>
-        <p>{text['home.description']}</p>
+    <main className={styles.home}>
+      <section className={styles.home__introduction}>
+        <h1 className={styles.home__header}>{text['home.title']}</h1>
+        <p className={styles.home__paragraph}>{text['home.description']}</p>
+      </section>
 
-        <button>{text['home.button']}</button>
-      </div>
+      <button className={styles.home__button}>{text['home.button']}</button>
     </main>
   );
 }
