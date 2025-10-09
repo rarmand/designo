@@ -1,10 +1,9 @@
 import styles from './home.module.scss';
 import text from '@/i18n/en.json';
 import Image from 'next/image';
+import phoneImg from '@/public/home/image-hero-phone.png';
 
 export default function Home() {
-  const phoneImgPath = '/home/image-hero-phone.png';
-
   return (
     <main className={styles.home}>
       <section className={styles.home__header}>
@@ -14,7 +13,11 @@ export default function Home() {
         </div>
 
         <button className={styles.home__button}>{text['home.button']}</button>
-        <Image src={phoneImgPath} alt='' width={100} height={200} />        </section>
+        
+        <div className={styles.home__phoneImg}>
+          <Image src={phoneImg} alt='' fill />        
+        </div>
+      </section>
     </main>
   );
 }

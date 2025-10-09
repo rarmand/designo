@@ -7,17 +7,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import text from '@/i18n/en.json';
 
+import logoDark from '@/public/logo-dark.png';
+import logoLight from '@/public/logo-light.png';
+import iconMenuOpen from '@/public/mobile/icon-hamburger.svg';
+import iconMenuClose from '@/public/mobile/icon-close.svg';
+
 export default function Header() {
   // TODO: nadać RWD
   // BEM - block element modifier
   const [open, setOpen] = useState(false);
   const router = useRouter();
-
-  const iconMenuClose = '/mobile/icon-close.svg';
-  const iconMenuOpen = '/mobile/icon-hamburger.svg';
-  const logoDark = '/logo-dark.png';
-  const logoLight = '/logo-light.png';
-
   const onLogoClick = () => router.push('/home');
   const onMenuButtonClick = () => setOpen(open => !open);
 
