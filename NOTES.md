@@ -84,3 +84,7 @@ Routing depends on the side of the website.
 Different libs for client-side and server-side rendering. Another method for page routing, another for app routing.
 
 > https://nextjs.org/docs/app/guides/migrating/app-router-migration
+
+#### Background IMG
+
+> https://www.w3schools.com/cssref/css_pr_background-position-y.php
