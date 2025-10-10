@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import text from '@/i18n/en.json';
 
+// images
 import logoDark from '@/public/logo-dark.png';
 import logoLight from '@/public/logo-light.png';
 import iconMenuOpen from '@/public/mobile/icon-hamburger.svg';

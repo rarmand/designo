@@ -1,8 +1,11 @@
 import styles from './home.module.scss';
 import text from '@/i18n/en.json';
 import Image from 'next/image';
+// images
 import phoneImg from '@/public/home/image-hero-phone.png';
 
+// uzupełnić alt strings w pics
+// stworzyć osobny komponent Button
 export default function Home() {
   return (
     <main className={styles.home}>
