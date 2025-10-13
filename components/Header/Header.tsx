@@ -8,10 +8,10 @@ import Link from 'next/link';
 import text from '@/i18n/en.json';
 
 // images
-import logoDark from '@/public/logo-dark.png';
-import logoLight from '@/public/logo-light.png';
-import iconMenuOpen from '@/public/mobile/icon-hamburger.svg';
-import iconMenuClose from '@/public/mobile/icon-close.svg';
+import logoDark from '@/public/header/logo-dark.png';
+import logoLight from '@/public/header/logo-light.png';
+import iconMenuOpen from '@/public/header/icon-hamburger.svg';
+import iconMenuClose from '@/public/header/icon-close.svg';
 
 export default function Header() {
   // TODO: nadać RWD

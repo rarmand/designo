@@ -88,3 +88,20 @@ Different libs for client-side and server-side rendering. Another method for pag
 #### Background IMG
 
 > https://www.w3schools.com/cssref/css_pr_background-position-y.php
+
+Needs to set `height` and `padding` to show the whole element in the background.
+Height must be calculated with a size of the background image.
+
+#### Relative image in header
+
+To add an element:
+
+'''
+<div className={styles.home__phoneImg}>
+  <Image src={phoneImg} alt='image hero phone' width={0} height={0} sizes='100vw' />
+</div>
+'''
+
+- brak jawnych rozmiarów: w=0, h=0; generowanie obrazka polega tylko na stylach CSS albo atrybucie `sizes` np. `sizes='100vw'`.
+- obraz jest generowany na podstawie rozmiaru okna.
+- `sizes='100vw'` - mówi, ze obraz ma zajmować 100% szerokości viewport, a `height: auto`
