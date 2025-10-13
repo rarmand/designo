@@ -7,7 +7,6 @@ import phoneImg from '@/public/home/image-hero-phone.png';
 // uzupełnić alt strings w pics
 // stworzyć osobny komponent Button
 // dodać setup dla i18n z odpowiedniej lib
-// dodać obrazek phone relative albo absolute
 export default function Home() {
   return (
     <main className={styles.home}>
@@ -22,8 +21,12 @@ export default function Home() {
         </div>
         
         <div className={styles.home__phoneImg}>
-          <Image src={phoneImg} alt='' fill />        
+          <Image src={phoneImg} alt='' width='0' height='0' sizes='100vw' />
         </div>
+      </section>
+
+      <section className={styles.home__next}>
+        No text
       </section>
     </main>
   );
