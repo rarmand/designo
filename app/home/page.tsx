@@ -21,13 +21,17 @@ export default function Home() {
         </div>
 
         <div className={styles.home__phoneImg}>
-          <Image src={phoneImg} alt='image hero phone' width={0} height={0} sizes='100vw' />
+          <Image
+            src={phoneImg}
+            alt='image hero phone'
+            width={0}
+            height={0}
+            sizes='100vw'
+          />
         </div>
       </section>
 
-      <section className={styles.home__next}>
-        No text
-      </section>
+      <section className={styles.home__next}>No text</section>
     </main>
   );
 }

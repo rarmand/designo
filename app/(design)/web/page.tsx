@@ -1,9 +1,7 @@
-import styles from '../page.module.css';
-
 export default function Web() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>WEB DESIGN</main>
+    <div>
+      <main>WEB DESIGN</main>
     </div>
   );
 }
