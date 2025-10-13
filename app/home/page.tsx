@@ -13,11 +13,13 @@ export default function Home() {
     <main className={styles.home}>
       <section className={styles.home__header}>
         <div className={styles.home__introduction}>
+          <div className={styles.home__text}>
           <h1 className={styles.home__title}>{text['home.title']}</h1>
           <p>{text['home.description']}</p>
         </div>
 
         <button className={styles.home__button}>{text['home.button']}</button>
+        </div>
         
         <div className={styles.home__phoneImg}>
           <Image src={phoneImg} alt='' fill />        
