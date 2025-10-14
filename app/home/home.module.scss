@@ -1,5 +1,4 @@
 .home {
-  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,16 +8,16 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
+
     height: calc(640px + 12rem);
     width: 100%;
-    
+
     background-image: url('/home/bg-pattern-hero-home.svg');
     background-size: 640px 640px;
     background-repeat: no-repeat;
     background-position: 0 90px;
     padding: 0 1rem;
-    background-color: orange;
+    background-color: $primary-color-400;
 
     overflow: hidden;
   }
@@ -29,7 +28,7 @@
     align-items: center;
     padding: 4rem 0;
     gap: 24px;
-    color: white;
+    color: $primary-color-100;
     font-size: 15px;
     z-index: 1;
   }
@@ -45,13 +44,12 @@
   }
 
   &__button {
-    background-color: white;
-    color: black;
+    background-color: $primary-color-100;
+    color: $primary-color-900;
     border-style: none;
     border-radius: 8px;
     text-transform: uppercase;
     padding: 1rem;
-    font-weight: bold;
   }
 
   &__phoneImg {
@@ -60,7 +58,5 @@
   }
 
   &__next {
-    background-color: white;
-    color: black;
   }
 }
