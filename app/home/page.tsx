@@ -3,10 +3,15 @@ import text from '@/i18n/en.json';
 import Image from 'next/image';
 // images
 import phoneImg from '@/public/home/image-hero-phone.png';
+import passionateImg from '@/public/home/illustration-passionate.svg';
+import resourcefulImg from '@/public/home/illustration-resourceful.svg';
+import friendlyImg from '@/public/home/illustration-friendly.svg';
 
 // uzupełnić alt strings w pics
 // stworzyć osobny komponent Button
 // dodać setup dla i18n z odpowiedniej lib
+// stworzyć BlockButton dla designs section
+// stworzyć ogólnie dostępny Footer
 export default function Home() {
   return (
     <main className={styles.home}>
@@ -31,7 +36,64 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.home__next}>No text</section>
+      {/* <section className={styles.home__designs}>
+        <div>
+          <h2>Web Design</h2>
+          <Link>View projects</Link>
+        </div>
+        <div>
+          <h2>App Design</h2>
+          <Link>View projects</Link>
+        </div>
+        <div>
+          <h2>Graphic Design</h2>
+          <Link>View projects</Link>
+        </div>
+      </section> */}
+      <section className={styles.home__principles}>
+        <div>
+          <Image
+            src={passionateImg}
+            alt='Passionate'
+            width={202}
+            height={202}
+          ></Image>
+          <h2>Passionate</h2>
+          <p>
+            Each project starts with an in-depth brand research to ensure we
+            only create products that serve a purpose. We merge art, design, and
+            technology into exciting new solutions.
+          </p>
+        </div>
+        <div>
+          <Image
+            src={resourcefulImg}
+            alt='Resourceful'
+            width={202}
+            height={202}
+          ></Image>
+          <h2>Resourceful</h2>
+          <p>
+            Everything that we do has a strategic purpose. We use an agile
+            approach in all of our projects and value customer collaboration. It
+            guarantees superior results that fulfill our clients’ needs.
+          </p>
+        </div>
+        <div>
+          <Image
+            src={friendlyImg}
+            alt='Friendly'
+            width={202}
+            height={202}
+          ></Image>
+          <h2>Friendly</h2>
+          <p>
+            We are a group of enthusiastic folks who know how to put people
+            first. Our success depends on our customers, and we strive to give
+            them the best experience a company can provide.
+          </p>
+        </div>
+      </section>
     </main>
   );
 }
