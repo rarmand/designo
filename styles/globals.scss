@@ -1,9 +1,6 @@
-// style globalne importowane do layout
-@use 'variables';
-
 :root {
-  --background: variables.$primary-color-100;
-  --foreground: variables.$primary-color-900;
+  --background: $primary-color-100;
+  --foreground: $primary-color-900;
 }
 
 // @media (prefers-color-scheme: dark) {
@@ -34,7 +31,7 @@ body {
 }
 
 a {
-  color: variables.$primary-color-400;
+  color: $primary-color-400;
   text-decoration: none;
 }
 
