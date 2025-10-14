@@ -21,14 +21,21 @@ Upiększa go wg ustawień w `.prettierrc`.
 
 #### SASS
 
-Instalacja SASSa jest ułatwiona, mozna tworzyć zestaw styli w folderze /styles albo jako osobne moduły dla kazdego page'a i component'u.
+Instalacja SASSa jest ułatwiona, mozna tworzyć zestaw styli w folderze `/styles` albo jako osobne moduły dla kazdego page'a i component'u.
 
-Mozna tworzyć częściowe pliki .scss, które są potem importowane lub uzywane w publicznym pliku `.scss`:
+Mozna tworzyć częściowe pliki .`scss`, które są potem importowane lub uzywane w publicznym pliku `.scss`:
 `_variables.scss`
 
-`@import variables` lub `@use variables`.
+- `@import variables` - depracated, nie stosować
+- `@use variables` - zamiast `import`
 
-Ten ukryty plik jest dostępny dla kazdego pliku `.scss` niezaleznie od ich połozenia.
+Plik ukryty nie jest dostępny dla `CSS modules`, jedynie dla pliku `globals.scss`, które są potem importowane np. do `layout'u`.
+
+!!! W tym przypadku mozna stosować plik `variables`, `mixins` jako publiczny. Wtedy **chyba** trzeba je znowu importować do `modules`.
+
+Mozna tez wyeksportować dostęp do nich dla całej aplikacji w `next.config.ts` => `sassOptions`. Nie trzeba importować zmiennych w `modules`.
+
+Nalezy pamiętać, ze `@import` jest depracated!
 
 #### Fonts
 
@@ -97,6 +104,7 @@ Height must be calculated with a size of the background image.
 To add an element:
 
 '''
+
 <div className={styles.home__phoneImg}>
   <Image src={phoneImg} alt='image hero phone' width={0} height={0} sizes='100vw' />
 </div>
