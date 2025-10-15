@@ -22,6 +22,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 26px;
+  color: $secondary-color-900;
 }
 
 * {
@@ -30,11 +33,40 @@ body {
   margin: 0;
 }
 
+h1 {
+  color: $primary-color-900;
+  font-size: 32px; // 48px;
+  line-height: 36px; // for bigger 48px;
+}
+
+h2 {
+  color: $primary-color-900;
+  font-size: 28px; // for bigger 40px;
+  line-height: 36px; // for bigger 48px;
+  letter-spacing: 1.4px; // 2px;
+}
+
+h3 {
+  color: $secondary-color-900;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 5px;
+}
+
 a {
   color: $primary-color-400;
   text-decoration: none;
 }
 
+button {
+  background-color: $primary-color-100;
+  color: $primary-color-900;
+  border-style: none;
+  border-radius: 8px;
+  text-transform: uppercase;
+  padding: 1rem;
+  // font-family: ;
+}
 // @media (prefers-color-scheme: dark) {
 //   html {
 //     color-scheme: dark;
