@@ -7,9 +7,16 @@ import passionateImg from '@/public/home/illustration-passionate.svg';
 import resourcefulImg from '@/public/home/illustration-resourceful.svg';
 import friendlyImg from '@/public/home/illustration-friendly.svg';
 
-// uzupełnić alt strings w pics
-// stworzyć osobny komponent Button
+// uzupełnić alt strings w pics - jak pisać alt strings?
+// jak pisać style BEM dla rozbudowanych elementów?
+// sprawdzić jak zapisać rozmiary obrazków, czy w HTML czy w CSS, zeby nie byly problemowe
+// ustawić style ogólne wg designu
+// ustawić czcionkę JOST zeby był większy wybór
+
 // dodać setup dla i18n z odpowiedniej lib
+// przenieść teksty z principles to dictionary
+
+// stworzyć osobny komponent Button
 // stworzyć BlockButton dla designs section
 // stworzyć ogólnie dostępny Footer
 export default function Home() {
@@ -59,7 +66,7 @@ export default function Home() {
             height={202}
           ></Image>          
           <div className={styles.home__principleDescription}>
-            <h2 className={styles.home__principleName}>Passionate</h2>
+            <h3 className={styles.home__principleName}>Passionate</h3>
             <p>
               Each project starts with an in-depth brand research to ensure we
               only create products that serve a purpose. We merge art, design, and
@@ -75,7 +82,7 @@ export default function Home() {
             height={202}
           ></Image>
           <div className={styles.home__principleDescription}>
-            <h2 className={styles.home__principleName}>Resourceful</h2>
+            <h3 className={styles.home__principleName}>Resourceful</h3>
             <p>
               Everything that we do has a strategic purpose. We use an agile
               approach in all of our projects and value customer collaboration. It
@@ -91,7 +98,7 @@ export default function Home() {
             height={202}
           ></Image>
           <div className={styles.home__principleDescription}>
-            <h2 className={styles.home__principleName}>Friendly</h2>
+            <h3 className={styles.home__principleName}>Friendly</h3>
             <p>
               We are a group of enthusiastic folks who know how to put people
               first. Our success depends on our customers, and we strive to give
