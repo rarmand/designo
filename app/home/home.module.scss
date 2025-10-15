@@ -62,5 +62,30 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 4rem 1rem;
+    row-gap: 80px;
+  }
+
+  &__principle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 48px;
+  }
+
+  &__principleDescription {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    line-height: 26px;
+    color: $primary-color-900;
+    font-size: 16px;
+  }
+
+  &__principleName {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
   }
 }

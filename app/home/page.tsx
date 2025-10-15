@@ -51,47 +51,53 @@ export default function Home() {
         </div>
       </section> */}
       <section className={styles.home__principles}>
-        <div>
+        <div className={styles.home__principle}>
           <Image
             src={passionateImg}
             alt='Passionate'
             width={202}
             height={202}
-          ></Image>
-          <h2>Passionate</h2>
-          <p>
-            Each project starts with an in-depth brand research to ensure we
-            only create products that serve a purpose. We merge art, design, and
-            technology into exciting new solutions.
-          </p>
+          ></Image>          
+          <div className={styles.home__principleDescription}>
+            <h2 className={styles.home__principleName}>Passionate</h2>
+            <p>
+              Each project starts with an in-depth brand research to ensure we
+              only create products that serve a purpose. We merge art, design, and
+              technology into exciting new solutions.
+            </p>
+          </div>
         </div>
-        <div>
+        <div className={styles.home__principle}>
           <Image
             src={resourcefulImg}
             alt='Resourceful'
             width={202}
             height={202}
           ></Image>
-          <h2>Resourceful</h2>
-          <p>
-            Everything that we do has a strategic purpose. We use an agile
-            approach in all of our projects and value customer collaboration. It
-            guarantees superior results that fulfill our clients’ needs.
-          </p>
+          <div className={styles.home__principleDescription}>
+            <h2 className={styles.home__principleName}>Resourceful</h2>
+            <p>
+              Everything that we do has a strategic purpose. We use an agile
+              approach in all of our projects and value customer collaboration. It
+              guarantees superior results that fulfill our clients’ needs.
+            </p>
+          </div>
         </div>
-        <div>
+        <div className={styles.home__principle}>
           <Image
             src={friendlyImg}
             alt='Friendly'
             width={202}
             height={202}
           ></Image>
-          <h2>Friendly</h2>
-          <p>
-            We are a group of enthusiastic folks who know how to put people
-            first. Our success depends on our customers, and we strive to give
-            them the best experience a company can provide.
-          </p>
+          <div className={styles.home__principleDescription}>
+            <h2 className={styles.home__principleName}>Friendly</h2>
+            <p>
+              We are a group of enthusiastic folks who know how to put people
+              first. Our success depends on our customers, and we strive to give
+              them the best experience a company can provide.
+            </p>
+          </div>
         </div>
       </section>
     </main>
