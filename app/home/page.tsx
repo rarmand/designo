@@ -64,13 +64,13 @@ export default function Home() {
             alt='Passionate'
             width={202}
             height={202}
-          ></Image>          
+          ></Image>
           <div className={styles.home__principleDescription}>
             <h3 className={styles.home__principleName}>Passionate</h3>
             <p>
               Each project starts with an in-depth brand research to ensure we
-              only create products that serve a purpose. We merge art, design, and
-              technology into exciting new solutions.
+              only create products that serve a purpose. We merge art, design,
+              and technology into exciting new solutions.
             </p>
           </div>
         </div>
@@ -85,8 +85,8 @@ export default function Home() {
             <h3 className={styles.home__principleName}>Resourceful</h3>
             <p>
               Everything that we do has a strategic purpose. We use an agile
-              approach in all of our projects and value customer collaboration. It
-              guarantees superior results that fulfill our clients’ needs.
+              approach in all of our projects and value customer collaboration.
+              It guarantees superior results that fulfill our clients’ needs.
             </p>
           </div>
         </div>

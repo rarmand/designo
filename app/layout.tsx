@@ -6,7 +6,9 @@ import Header from '@/components/Header/Header';
 
 const jost = Jost({
   subsets: ['latin'],
-  weight: '400',
+  weight: ['400', '500'],
+  style: ['normal', 'italic'],
+  variable: '--font-jost',
 });
 
 // TODO: config of i18n lib
@@ -30,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body className={`${jost.className}`}>
+    <html>
+      <body className={jost.variable}>
         <Header />
         {children}
       </body>
