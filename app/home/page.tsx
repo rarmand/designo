@@ -11,7 +11,6 @@ import friendlyImg from '@/public/home/illustration-friendly.svg';
 // jak pisać style BEM dla rozbudowanych elementów?
 // sprawdzić jak zapisać rozmiary obrazków, czy w HTML czy w CSS, zeby nie byly problemowe
 // ustawić style ogólne wg designu
-// ustawić czcionkę JOST zeby był większy wybór
 
 // dodać setup dla i18n z odpowiedniej lib
 // przenieść teksty z principles to dictionary

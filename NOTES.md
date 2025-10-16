@@ -45,6 +45,10 @@ Jeśli chcemy trzymać lokalnie, wtedy trzeba pobrać font do projektu i odpowie
 
 Optymalniej uzywac NextJS pobierającego Google font, bo z reguly strona internetowa będzie działać tylko gdy działa internet.
 
+Szczegóły ustawień:
+
+> https://nextjs.org/docs/pages/api-reference/components/font
+
 #### i18n
 
 > https://dev.to/antoniojuniordev/how-to-implement-internationalization-i18n-in-a-nextjs-project-without-changing-the-url-1g70
