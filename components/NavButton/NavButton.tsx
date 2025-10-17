@@ -10,17 +10,15 @@ type NavButtonProps = {
   route: 'about' | 'home' | 'locations' | 'contact';
 };
 
+// TODO: dodac testy
 // function takes props
 const NavButton = ({ name, variant = 'primary', route }: NavButtonProps) => {
   const router = useRouter();
-  // do zweryfikowania czy da sie to lepiej napisać
-  const onClick = () => {
-    const path = '/' + route;
-    router.push(path);
-  };
+  const variantClass = `${styles.button} ${styles[`button--${variant}`]}`;
+  const onClick = () => router.push('/' + route);
 
   return (
-    <button className={styles.button} onClick={onClick} type='button'>
+    <button className={variantClass} onClick={onClick} type='button'>
       {name}
     </button>
   );
