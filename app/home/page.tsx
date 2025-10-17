@@ -1,6 +1,8 @@
 import styles from './home.module.scss';
 import text from '@/i18n/en.json';
 import Image from 'next/image';
+import NavButton from '@/components/NavButton/NavButton';
+
 // images
 import phoneImg from '@/public/home/image-hero-phone.png';
 import passionateImg from '@/public/home/illustration-passionate.svg';
@@ -15,7 +17,6 @@ import friendlyImg from '@/public/home/illustration-friendly.svg';
 // dodać setup dla i18n z odpowiedniej lib
 // przenieść teksty z principles to dictionary
 
-// stworzyć osobny komponent Button
 // stworzyć BlockButton dla designs section
 // stworzyć ogólnie dostępny Footer
 export default function Home() {
@@ -28,7 +29,7 @@ export default function Home() {
             <p>{text['home.description']}</p>
           </div>
 
-          <button className={styles.home__button}>{text['home.button']}</button>
+          <NavButton name={text['home.button']} route='about' />
         </div>
 
         <div className={styles.home__phoneImg}>
