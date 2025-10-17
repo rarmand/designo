@@ -89,6 +89,10 @@ const onMenuButtonClick = () => setOpen(open => !open); // callback
 
 > https://pl.typeofweb.com/react-hooks-usestate-wiele-stanow-callbacki-i-inne-niuanse
 
+#### Creating components with functional JS
+
+> https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/forms_and_events
+
 #### Routing in NextJS
 
 Routing depends on the side of the website.
@@ -107,13 +111,25 @@ Height must be calculated with a size of the background image.
 
 To add an element:
 
-'''
-
+```
 <div className={styles.home__phoneImg}>
   <Image src={phoneImg} alt='image hero phone' width={0} height={0} sizes='100vw' />
 </div>
-'''
+```
 
 - brak jawnych rozmiarów: w=0, h=0; generowanie obrazka polega tylko na stylach CSS albo atrybucie `sizes` np. `sizes='100vw'`.
 - obraz jest generowany na podstawie rozmiaru okna.
 - `sizes='100vw'` - mówi, ze obraz ma zajmować 100% szerokości viewport, a `height: auto`
+
+#### Client-Side components in Server-Side components
+
+Nie mozna podawać `onClick` i innych funkcji z `event` do `props` client component.
+
+Wszystkie te eventowe elementy mają być tylko po stronie przeglądarki.
+
+Kod server-side components nie istnieje w przeglądarce, więc przeglądarka nie moze uzyć tego kodu.
+
+Kliknięcie musi być obsłuzone na client-side.
+
+**Alternatywa** - uzycie Server Action po kliknięciu.
+Wtedy trzeba tworzyć dodatkową funkcję `doAction()`, która zostanie wykonana po stronie serwera.
