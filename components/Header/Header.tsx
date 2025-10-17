@@ -35,7 +35,7 @@ export default function Header() {
           onClick={onLogoClick}
           type='button'
         >
-          <Image src={logoDark} alt='' width={200} height={27} />
+          <Image src={logoDark} alt='Logo' width={200} height={27} priority />
         </button>
         <button
           className={styles.header__button}
