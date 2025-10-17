@@ -5,6 +5,7 @@
   letter-spacing: 1px;
   padding: 1rem 1.5rem;
   border-radius: 8px;
+  cursor: pointer;
 
   &--primary {
     background-color: $primary-color-100;
@@ -14,5 +15,11 @@
   &--secondary {
     background-color: $primary-color-400;
     color: $primary-color-100;
+  }
+
+  &:hover {
+    background-color: $secondary-color-400;
+    color: $primary-color-100;
+    transition-duration: 0.3s;
   }
 }
