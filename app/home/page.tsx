@@ -4,7 +4,6 @@ import Image from 'next/image';
 import ButtonLink from '@/components/ButtonLink';
 import BlockLink from '@/components/BlockLink';
 
-
 // images
 import phoneImg from '@/public/home/image-hero-phone.png';
 import passionateImg from '@/public/home/illustration-passionate.svg';
@@ -44,9 +43,9 @@ export default function Home() {
       </section>
 
       <section className={styles.home__designs}>
-        <BlockLink name='Web Design' />
-        <BlockLink name='App Design' />
-        <BlockLink name='Graphic Design' />
+        <BlockLink name='Web Design' route='web' />
+        <BlockLink name='App Design' route='app' />
+        <BlockLink name='Graphic Design' route='graphic' />
       </section>
 
       <section className={styles.home__principles}>
