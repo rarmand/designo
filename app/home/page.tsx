@@ -1,4 +1,4 @@
-import styles from './home.module.scss';
+import styles from './Home.module.scss';
 import text from '@/i18n/en.json';
 import Image from 'next/image';
 import ButtonLink from '@/components/ButtonLink';
