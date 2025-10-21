@@ -1,8 +1,8 @@
 import styles from './home.module.scss';
 import text from '@/i18n/en.json';
 import Image from 'next/image';
-import NavButton from '@/components/NavButton/NavButton';
 import BlockLink from '@/components/BlockLink/BlockLink';
+import ButtonLink from '@/components/ButtonLink/ButtonLink';
 
 // images
 import phoneImg from '@/public/home/image-hero-phone.png';
@@ -28,7 +28,7 @@ export default function Home() {
             <p>{text['home.description']}</p>
           </div>
 
-          <NavButton name={text['home.button']} route='about' />
+          <ButtonLink name={text['home.button']} route='about' />
         </div>
 
         <div className={styles.home__phoneImg}>
