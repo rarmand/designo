@@ -11,6 +11,7 @@ type NavButtonProps = {
 };
 
 // TODO: dodac testy
+// TODO: poprawic BEM names
 // function takes props
 const NavButton = ({ name, variant = 'primary', route }: NavButtonProps) => {
   const router = useRouter();

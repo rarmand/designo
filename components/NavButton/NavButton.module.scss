@@ -17,7 +17,8 @@
     color: $primary-color-100;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $secondary-color-400;
     color: $primary-color-100;
     transition-duration: 0.3s;
