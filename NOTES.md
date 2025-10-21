@@ -1,10 +1,16 @@
+#### (folder) routing
+
+Grouping folder - segment ukryty, który nie wpływa na URL.
+Podfolder, np. `/app` jest URLem.
+_____
+
 #### favicon
 
 `Favicon.ico` is found by NextJS setup by default, on the level of `app` folder. We can also use `.png` format.
 
 You can add `icon` to metadata and keep icons in `public` folder.
 
----
+_____
 
 #### middleware.ts
 
@@ -13,11 +19,13 @@ You can add `icon` to metadata and keep icons in `public` folder.
 Middleware allows you to run code before a request is completed. Then, based on the incoming request, you can modify the response by rewriting, redirecting, modifying the request or response headers, or responding directly.
 
 Here, used to redirection from `/` to `/home`.
+_____
 
 #### Prettier
 
 Narzędzie, które dba o wygląd kodu, zeby był taki sam w całym projekcie.
 Upiększa go wg ustawień w `.prettierrc`.
+_____
 
 #### SASS
 
@@ -36,6 +44,17 @@ Plik ukryty nie jest dostępny dla `CSS modules`, jedynie dla pliku `globals.scs
 Mozna tez wyeksportować dostęp do nich dla całej aplikacji w `next.config.ts` => `sassOptions`. Nie trzeba importować zmiennych w `modules`.
 
 Nalezy pamiętać, ze `@import` jest depracated!
+_____
+
+#### CSS Module naming
+
+Recommended:
+
+- PascalCase - `BlockLink.module.scss` 
+- kebab-case - `block-link.module.scss`
+
+Poleca się dopasowanie nazwy modułu do nazwy komponentu, czyli `BlockLink.module.scss`, bo wtedy łatwo się kojarzy i sorting w folderze jest czytelny.
+_____
 
 #### Fonts
 
@@ -48,10 +67,12 @@ Optymalniej uzywac NextJS pobierającego Google font, bo z reguly strona interne
 Szczegóły ustawień:
 
 > https://nextjs.org/docs/pages/api-reference/components/font
+____
 
 #### i18n
 
 > https://dev.to/antoniojuniordev/how-to-implement-internationalization-i18n-in-a-nextjs-project-without-changing-the-url-1g70
+____
 
 #### BEM
 
@@ -68,6 +89,7 @@ Element - a part of a block that has no standalone meaning and is semantically t
 Modifier - a flag on a block or element. Use them to change appearance or behavior.
 
 !! mozna stworzyć skrypt tworzenia nowego komponentu client-side i server-side z CLI
+_____
 
 #### JS functions
 
@@ -88,10 +110,12 @@ const onMenuButtonClick = () => setOpen(open => !open); // callback
 - przy operacjach konkurencyjnych, sekwencji wywołań, callbackach, asynchronicznych akcjach – zawsze użyj wersji funkcyjnej (`setOpen(open => !open)`), bo masz gwarancję pracy na najnowszym stanie
 
 > https://pl.typeofweb.com/react-hooks-usestate-wiele-stanow-callbacki-i-inne-niuanse
+_____
 
 #### Creating components with functional JS
 
 > https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/forms_and_events
+____
 
 #### Routing in NextJS
 
@@ -99,6 +123,7 @@ Routing depends on the side of the website.
 Different libs for client-side and server-side rendering. Another method for page routing, another for app routing.
 
 > https://nextjs.org/docs/app/guides/migrating/app-router-migration
+____
 
 #### Background IMG
 
@@ -106,6 +131,7 @@ Different libs for client-side and server-side rendering. Another method for pag
 
 Needs to set `height` and `padding` to show the whole element in the background.
 Height must be calculated with a size of the background image.
+____
 
 #### Relative image in header
 
@@ -120,6 +146,7 @@ To add an element:
 - brak jawnych rozmiarów: w=0, h=0; generowanie obrazka polega tylko na stylach CSS albo atrybucie `sizes` np. `sizes='100vw'`.
 - obraz jest generowany na podstawie rozmiaru okna.
 - `sizes='100vw'` - mówi, ze obraz ma zajmować 100% szerokości viewport, a `height: auto`
+____
 
 #### Client-Side components in Server-Side components
 
@@ -133,3 +160,45 @@ Kliknięcie musi być obsłuzone na client-side.
 
 **Alternatywa** - uzycie Server Action po kliknięciu.
 Wtedy trzeba tworzyć dodatkową funkcję `doAction()`, która zostanie wykonana po stronie serwera.
+____
+
+#### `<button>` a `<a>` i `<Link>`
+
+Zasada, którą warto zapamiętać:
+
+-	Link - (`<a href="...">`) → nawigacja (przenosi użytkownika gdzieś indziej).
+-	Button - (`<button>`) → akcja (zmienia coś na bieżącej stronie, np. otwiera modal, wysyła formularz).
+
+Dlaczego to ma znaczenie
+	
+**Linki**:
+	
+-	można otworzyć w nowej karcie,
+
+- obsługują rozbudowany wygląd HTML, np. `<h2>`, `<p>` i `<symbol>`,
+	
+-	są indeksowane przez Google,
+	
+-	można je skopiować, dodać do zakładek,
+	
+-	działają z nawigacją klawiaturą (Enter) i czytnikami ekranu.
+
+**Przyciski**:
+	
+-	nie mają atrybutu `href`,
+
+- nie obsługują skomplikowanej HTMLowej budowy, przyjmują tylko `phrasing content`, czyli zwykle tekst, ikony lub span’y,
+	
+-	nie zmieniają adresu URL (nie tworzą historii przeglądarki),
+	
+-	są używane do akcji takich jak „submit”, „toggle” czy „open modal”.
+
+> Dla `<Link>` wymagana obsługa `:hover` i `:focus`.
+
+
+____
+
+Doczytać co to semantyka HTML, weryfikatory HTML (W3C Validator, ESLint), rozpoznawanie przez czytniki jaką rolę pełni dany element.
+
+- accessibility
+- semantyka
