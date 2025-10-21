@@ -2,6 +2,7 @@ import styles from './home.module.scss';
 import text from '@/i18n/en.json';
 import Image from 'next/image';
 import NavButton from '@/components/NavButton/NavButton';
+import BlockLink from '@/components/BlockLink/BlockLink';
 
 // images
 import phoneImg from '@/public/home/image-hero-phone.png';
@@ -12,12 +13,10 @@ import friendlyImg from '@/public/home/illustration-friendly.svg';
 // uzupełnić alt strings w pics - jak pisać alt strings?
 // jak pisać style BEM dla rozbudowanych elementów?
 // sprawdzić jak zapisać rozmiary obrazków, czy w HTML czy w CSS, zeby nie byly problemowe
-// ustawić style ogólne wg designu
 
 // dodać setup dla i18n z odpowiedniej lib
 // przenieść teksty z principles to dictionary
 
-// stworzyć BlockButton dla designs section
 // stworzyć ogólnie dostępny Footer
 export default function Home() {
   return (
@@ -43,20 +42,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className={styles.home__designs}>
-        <div>
-          <h2>Web Design</h2>
-          <Link>View projects</Link>
-        </div>
-        <div>
-          <h2>App Design</h2>
-          <Link>View projects</Link>
-        </div>
-        <div>
-          <h2>Graphic Design</h2>
-          <Link>View projects</Link>
-        </div>
-      </section> */}
+      <section className={styles.home__designs}>
+        <BlockLink name='Web Design' />
+        <BlockLink name='App Design' />
+        <BlockLink name='Graphic Design' />
+      </section>
+
       <section className={styles.home__principles}>
         <div className={styles.home__principle}>
           <Image
