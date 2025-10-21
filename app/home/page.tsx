@@ -1,8 +1,9 @@
 import styles from './home.module.scss';
 import text from '@/i18n/en.json';
 import Image from 'next/image';
-import BlockLink from '@/components/BlockLink/BlockLink';
-import ButtonLink from '@/components/ButtonLink/ButtonLink';
+import ButtonLink from '@/components/ButtonLink';
+import BlockLink from '@/components/BlockLink';
+
 
 // images
 import phoneImg from '@/public/home/image-hero-phone.png';
