@@ -1,5 +1,5 @@
 import styles from './Home.module.scss';
-import text from '@/i18n/en.json';
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import ButtonLink from '@/components/ButtonLink';
 import BlockLink from '@/components/BlockLink';
@@ -10,31 +10,36 @@ import passionateImg from '@/public/home/illustration-passionate.svg';
 import resourcefulImg from '@/public/home/illustration-resourceful.svg';
 import friendlyImg from '@/public/home/illustration-friendly.svg';
 
+// interface HomePageProps {
+//   params: {locale: string};
+// }
 // uzupełnić alt strings w pics - jak pisać alt strings?
 // jak pisać style BEM dla rozbudowanych elementów?
 // sprawdzić jak zapisać rozmiary obrazków, czy w HTML czy w CSS, zeby nie byly problemowe
 
-// dodać setup dla i18n z odpowiedniej lib
 // przenieść teksty z principles to dictionary
 
+// rozdzielić NOTES na grupy, za duzo zamieszania
 // stworzyć ogólnie dostępny Footer
-export default function Home() {
+export default async function HomePage() {
+  const translator = await getTranslations('HomePage');
+
   return (
     <main className={styles.home}>
       <section className={styles.home__header}>
         <div className={styles.home__introduction}>
           <div className={styles.home__text}>
-            <h1 className={styles.home__title}>{text['home.title']}</h1>
-            <p>{text['home.description']}</p>
+            <h1 className={styles.home__title}>{translator('title')}</h1>
+            <p>{translator('description')}</p>
           </div>
 
-          <ButtonLink name={text['home.button']} route='about' />
+          <ButtonLink name={translator('button')} route='about' />
         </div>
 
         <div className={styles.home__phoneImg}>
           <Image
             src={phoneImg}
-            alt='image hero phone'
+            alt={translator('image')}
             width={0}
             height={0}
             sizes='100vw'
@@ -43,52 +48,52 @@ export default function Home() {
       </section>
 
       <section className={styles.home__designs}>
-        <BlockLink name='Web Design' route='web' />
-        <BlockLink name='App Design' route='app' />
-        <BlockLink name='Graphic Design' route='graphic' />
+        <BlockLink name={translator('designs.web')} route='web' />
+        <BlockLink name={translator('designs.app')} route='app' />
+        <BlockLink name={translator('designs.graphic')} route='graphic' />
       </section>
 
       <section className={styles.home__principles}>
         <div className={styles.home__principle}>
           <Image
             src={passionateImg}
-            alt='Passionate'
+            alt={translator('principles.passionate.alt')}
             width={202}
             height={202}
           ></Image>
           <div className={styles.home__principleDescription}>
             <h3 className={styles.home__principleName}>
-              {text['home.principle.passionateName']}
+              {translator('principles.passionate.name')}
             </h3>
-            <p>{text['home.principle.passionateText']}</p>
+            <p>{translator('principles.passionate.description')}</p>
           </div>
         </div>
         <div className={styles.home__principle}>
           <Image
             src={resourcefulImg}
-            alt='Resourceful'
+            alt={translator('principles.resourceful.alt')}
             width={202}
             height={202}
           ></Image>
           <div className={styles.home__principleDescription}>
             <h3 className={styles.home__principleName}>
-              {text['home.principle.resourcefulName']}
+              {translator('principles.resourceful.name')}
             </h3>
-            <p>{text['home.principle.resourcefulText']}</p>
+            <p>{translator('principles.resourceful.description')}</p>
           </div>
         </div>
         <div className={styles.home__principle}>
           <Image
             src={friendlyImg}
-            alt='Friendly'
+            alt={translator('principles.friendly.alt')}
             width={202}
             height={202}
           ></Image>
           <div className={styles.home__principleDescription}>
             <h3 className={styles.home__principleName}>
-              {text['home.principle.friendlyName']}
+              {translator('principles.friendly.name')}
             </h3>
-            <p>{text['home.principle.friendlyText']}</p>
+            <p>{translator('principles.friendly.description')}</p>
           </div>
         </div>
       </section>
