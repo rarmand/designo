@@ -2,10 +2,10 @@
 
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import styles from './Header.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import text from '@/i18n/en.json';
 
 // images
 import logoDark from '@/public/header/logo-dark.png';
@@ -18,6 +18,7 @@ export default function Header() {
   // BEM - block element modifier
   const [open, setOpen] = useState(false);
   const router = useRouter();
+  const translator = useTranslations('Header');
   const onLogoClick = () => router.push('/home');
   const onMenuButtonClick = () => setOpen(open => !open);
 
@@ -35,18 +36,24 @@ export default function Header() {
           onClick={onLogoClick}
           type='button'
         >
-          <Image src={logoDark} alt='Logo' width={200} height={27} priority />
+          <Image
+            src={logoDark}
+            alt={translator('logo')}
+            width={200}
+            height={27}
+            priority
+          />
         </button>
         <button
           className={styles.header__button}
           onClick={onMenuButtonClick}
           type='button'
           aria-expanded={open}
-          aria-controls='main-menu'
+          aria-controls='header-menu'
         >
           <Image
             src={open ? iconMenuClose : iconMenuOpen}
-            alt=''
+            alt={translator('hamburger')}
             width={20}
             height={20}
           />
@@ -54,32 +61,29 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav id='main-menu' className={styles.header__menu}>
+        <nav id='header-menu' className={styles.header__menu}>
           <Link
             className={styles.header__link}
             href='/about'
             onClick={onMenuButtonClick}
-            aria-label='About our company'
           >
-            {text['header.link.about']}
+            {translator('links.about')}
           </Link>
 
           <Link
             className={styles.header__link}
             href='/locations'
             onClick={onMenuButtonClick}
-            aria-label='Locations'
           >
-            {text['header.link.locations']}
+            {translator('links.locations')}
           </Link>
 
           <Link
             className={styles.header__link}
             href='/contact'
             onClick={onMenuButtonClick}
-            aria-label='Contact'
           >
-            {text['header.link.contact']}
+            {translator('links.contact')}
           </Link>
         </nav>
       )}
