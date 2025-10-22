@@ -1,18 +1,43 @@
 {
-  "website.title": "Frontend Mentor | Designo Agency Website Challenge",
-  "website.description": "Designo agency focused on a delivery of the best experience to you.",
-  "header.link.locations": "Locations",
-  "header.link.contact": "Contact",
-  "header.link.about": "Our company",
-  "header.logo.alt": "Designo logo",
-  "header.hamburger.alt": "Menu",
-  "home.title": "Award-winning custom designs and digital branding solutions",
-  "home.description": "With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.",
-  "home.button": "Learn more",
-  "home.principle.passionateName": "Passionate",
-  "home.principle.passionateText": "Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge art, design, and technology into exciting new solutions.",
-  "home.principle.resourcefulName": "Resourceful",
-  "home.principle.resourcefulText": "Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value customer collaboration. It guarantees superior results that fulfill our clients’ needs.",
-  "home.principle.friendlyName": "Friendly",
-  "home.principle.friendlyText": "We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide."
+  "Metadata": {
+    "title": "Frontend Mentor | Designo Agency Website Challenge",
+    "description": "Designo agency focused on a delivery of the best experience to you."
+  },
+  "Header": {
+    "links": {
+      "locations": "Locations",
+      "about": "Our company",
+      "contact": "Contact"
+    },
+    "logo": "Designo company's logo",
+    "hamburger": "Menu"
+  },
+  "HomePage": {
+    "title": "Award-winning custom designs and digital branding solutions",
+    "description": "With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.",
+    "button": "Learn more",
+    "image": "Phone image",
+    "designs": {
+      "web": "Web Design",
+      "app": "App Design",
+      "graphic": "Graphic Design"
+    },
+    "principles": {
+      "passionate": {
+        "name": "Passionate",
+        "alt": "Passionate image",
+        "description": "Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge art, design, and technology into exciting new solutions."
+      },
+      "resourceful": {
+        "name": "Resourceful",
+        "alt": "Resourceful image",
+        "description": "Everything that we do has a strategic purpose. We use an agile approach in all of our projects and value customer collaboration. It guarantees superior results that fulfill our clients’ needs."
+      },
+      "friendly": {
+        "name": "Friendly",
+        "alt": "Friendly image",
+        "description": "We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide."
+      }
+    }
+  }
 }
