@@ -12,8 +12,6 @@ type BlockLinkProps = {
   route: 'graphic' | 'web' | 'app';
 };
 
-// TODO: add to dictionary
-// TODO: add route
 const BlockLink = ({ name, route }: BlockLinkProps) => {
   const href = '/' + route;
   const translator = useTranslations('BlockLink');
