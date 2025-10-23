@@ -229,6 +229,100 @@ W praktyce — jeśli link wyświetla czytelną nazwę, użyj tej samej wartośc
 
 #### i18n client-side and server-side
 
+- instalacja biblioteki `next-intl`
+- dodanie konfiguracji w `next.config.ts`
+- stworzony folder `i18n` z tłumaczeniami i locales
+- dodany do `i18n` plik `request.ts`, w którym przygotowana jest funkcja zwracająca odpowiedni plik z odpowiednim `locale`
+- dodany plik z tłumaczeniami dla danego `locale` - plik JSON; możliwe zagnieżdżenie JSONów oraz polecane pojedyncze wyrażenia dla poprawy czytelności pliku
+- translacje dla server-side components gotowe do użycia
+- do `app/layout.tsx` dodany `import NextIntlClientProvider`, który ma zapewnić dostęp do tłumaczeń dla client-side components
+- dostęp do translacji różni się, wykorzystywane są różne metody
+
+1. **Dostęp do translacji w client-side:**
+
+- `import { useTranslations } from 'next-intl'`
+- `const translator = useTranslations('Header')`
+
+2. **Dostęp do translacji w server-side:**
+
+- `import { getTranslations } from 'next-intl/server'`
+- `const translator = await getTranslations('HomePage')`
 ---
 
-#### withFunction ( OtherFunction ) decorator
+#### Higher Order Functions
+
+Can do at least one of the following:
+
+- Accept other functions as arguments.
+- Return a function as a result.
+
+> https://www.freecodecamp.org/news/higher-order-functions-explained/
+
+Example:
+
+`withFunction ( OtherFunction );`
+
+Example no. 1:
+
+```
+// Higher Order Function that accepts a callback function
+
+function higherOrderFunction(callback) {
+  // Performing some operations
+  console.log("Executing the higher order function...");
+
+  // Calling the callback function
+  callback();
+}
+
+// Callback function to be passed to the higher order function
+
+function callbackFunction() {
+  console.log("Executing the callback function...");
+}
+
+// Calling the higher order function with the callback function as argument
+
+higherOrderFunction(callbackFunction);
+```
+
+Example no. 2:
+
+```
+// Higher Order Function that returns a function
+
+function createGreeter(greeting: string) {
+  // Returning a new function
+  return function(name) {
+    console.log(`${greeting}, ${name}!`);
+  };
+}
+
+// Creating a greeter function with a specific greeting
+
+const greetHello = createGreeter("Hello");
+
+greetHello("John"); // Output: Hello, John!
+
+// Creating another greeter function with a different greeting
+
+const greetGoodbye = createGreeter("Goodbye");
+
+greetGoodbye("Alice"); // Output: Goodbye, Alice!
+```
+
+#### Function Composition (Chaining HOFs)
+Function composition involves chaining multiple higher order functions together to create more complex operations or transformations.
+
+```
+const numbers = [1, 2, 3, 4, 5];
+
+const result = numbers
+  .filter(num => num % 2 === 0) // Filter even numbers
+  .map(num => num * num); // Square each number
+```
+
+- Use `map()` for transforming elements in an array.
+- Use `filter()` for selecting elements based on a condition.
+- Use `reduce()` for aggregating values into a single result.
+- Use `forEach()` for performing side effects without returning a new array.
