@@ -29,8 +29,16 @@ const Footer = ({}: FooterProps) => {
           {translator('links.contact')}
         </Link>
       </nav>
-      <div className={styles.footer__address}></div>
-      <div className={styles.footer__contact}></div>
+      <div className={styles.footer__address}>
+        <p>Designo Central Office</p>
+        <p>3886 Wellington Street</p>
+        <p>Toronto, Ontario M9C 3J5</p>
+      </div>
+      <div className={styles.footer__contact}>
+        <p>Contact Us (Central Office)</p>
+        <p>P : +1 253-863-8967</p>
+        <p>M : contact@designo.co</p>
+      </div>
       <div className={styles.footer__socialMedia}></div>
     </div>
   );
