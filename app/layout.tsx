@@ -4,6 +4,7 @@ import '@/styles/globals.scss';
 import Header from '@/components/Header';
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
+import Footer from '@/components/Footer';
 
 const jost = Jost({
   subsets: ['latin'],
@@ -51,6 +52,7 @@ export default function RootLayout({
         <NextIntlClientProvider>
           <Header />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

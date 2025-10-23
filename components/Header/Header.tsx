@@ -9,7 +9,6 @@ import Link from 'next/link';
 
 // images
 import logoDark from '@/public/header/logo-dark.png';
-import logoLight from '@/public/header/logo-light.png';
 import iconMenuOpen from '@/public/header/icon-hamburger.svg';
 import iconMenuClose from '@/public/header/icon-close.svg';
 
