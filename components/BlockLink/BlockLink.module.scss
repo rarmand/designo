@@ -21,6 +21,10 @@
     color: $primary-color-100;
   }
 
+  &__icon {
+    margin-left: 16px;
+  }
+
   &:hover,
   &:focus {
     background-color: $secondary-color-400;

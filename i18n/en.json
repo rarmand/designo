@@ -3,6 +3,10 @@
     "title": "Frontend Mentor | Designo Agency Website Challenge",
     "description": "Designo agency focused on a delivery of the best experience to you."
   },
+  "BlockLink": {
+    "subtitle": "View projects",
+    "icon": "Right arrow icon"
+  },
   "Header": {
     "links": {
       "locations": "Locations",

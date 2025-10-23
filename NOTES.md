@@ -219,9 +219,10 @@ Atrybuty `aria-label` służą do nadawania elementom HTML zrozumiałych nazw dl
 Jeśli elementy mają już jasny, tekstowy opis (nie są ikonami ani skrótami), dodatkowy `aria-label` może być zbędny. Jeśli używasz np. samych ikon (bez tekstu), `aria-label` powinien opisywać cel linku.
 
 Nazwy aria-labels powinny opisywać funkcję — np.:
--	“Go to Locations page”
--	“About our company”
--	“Contact us”
+
+- “Go to Locations page”
+- “About our company”
+- “Contact us”
 
 W praktyce — jeśli link wyświetla czytelną nazwę, użyj tej samej wartości translacji, a dla ikon czy skrótów stwórz opisową etykietę (np. “Show contact page”).
 
@@ -247,6 +248,7 @@ W praktyce — jeśli link wyświetla czytelną nazwę, użyj tej samej wartośc
 
 - `import { getTranslations } from 'next-intl/server'`
 - `const translator = await getTranslations('HomePage')`
+
 ---
 
 #### Higher Order Functions
@@ -310,8 +312,10 @@ const greetGoodbye = createGreeter("Goodbye");
 
 greetGoodbye("Alice"); // Output: Goodbye, Alice!
 ```
+____
 
 #### Function Composition (Chaining HOFs)
+
 Function composition involves chaining multiple higher order functions together to create more complex operations or transformations.
 
 ```
