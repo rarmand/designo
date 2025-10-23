@@ -19,8 +19,10 @@ const BlockLink = ({ name, route }: BlockLinkProps) => {
   return (
     <Link href={href} className={styles.blockLink}>
       <h2 className={styles.blockLink__title}>{name}</h2>
-      <p>{translator('subtitle')} 
-        <Image src={rightArrowIcon}
+      <p>
+        {translator('subtitle')}
+        <Image
+          src={rightArrowIcon}
           className={styles.blockLink__icon}
           alt={translator('icon')}
           width={4}
@@ -28,7 +30,6 @@ const BlockLink = ({ name, route }: BlockLinkProps) => {
           priority
         />
       </p>
-      
     </Link>
   );
 };

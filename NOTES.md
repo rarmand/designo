@@ -312,7 +312,8 @@ const greetGoodbye = createGreeter("Goodbye");
 
 greetGoodbye("Alice"); // Output: Goodbye, Alice!
 ```
-____
+
+---
 
 #### Function Composition (Chaining HOFs)
 
