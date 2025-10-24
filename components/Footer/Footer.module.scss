@@ -29,4 +29,18 @@
     letter-spacing: 2px;
     text-transform: uppercase;
   }
+
+  &__address {
+    text-align: center;
+    font-style: normal;
+    opacity: 49%;
+
+    &::first-line {
+      font-weight: 700;
+    }
+  }
+
+  &__contactLink {
+    color: $primary-color-100;
+  }
 }

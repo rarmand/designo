@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 
 const jost = Jost({
   subsets: ['latin'],
-  weight: ['400', '500'],
+  weight: ['400', '500', '700'],
   style: ['normal', 'italic'],
   variable: '--font-jost',
 });

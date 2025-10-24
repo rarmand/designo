@@ -29,16 +29,35 @@ const Footer = ({}: FooterProps) => {
           {translator('links.contact')}
         </Link>
       </nav>
-      <div className={styles.footer__address}>
-        <p>Designo Central Office</p>
-        <p>3886 Wellington Street</p>
-        <p>Toronto, Ontario M9C 3J5</p>
-      </div>
-      <div className={styles.footer__contact}>
-        <p>Contact Us (Central Office)</p>
-        <p>P : +1 253-863-8967</p>
-        <p>M : contact@designo.co</p>
-      </div>
+
+      <address className={styles.footer__address}>
+        {translator('address.name')}
+        <br />
+        {translator('address.street')}
+        <br />
+        {translator('address.city')}
+      </address>
+
+      <address className={styles.footer__address}>
+        {translator('address.contact')}
+        <br />
+        <a
+          href={`tel:${translator('address.phone.number')}`}
+          className={styles.footer__contactLink}
+        >
+          {translator('address.phone.ticket')}
+          {translator('address.phone.number')}
+        </a>
+        <br />
+        <a
+          href={`mailto:${translator('address.mail.address')}`}
+          className={styles.footer__contactLink}
+        >
+          {translator('address.mail.ticket')}
+          {translator('address.mail.address')}
+        </a>
+      </address>
+
       <div className={styles.footer__socialMedia}></div>
     </footer>
   );

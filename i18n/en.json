@@ -50,6 +50,20 @@
       "about": "Our company",
       "contact": "Contact"
     },
-    "logo": "Designo company's logo"
+    "logo": "Designo company's logo",
+    "address": {
+      "name": "Designo Central Office",
+      "street": "3886 Wellington Street",
+      "city": "Toronto, Ontario M9C 3J5",
+      "contact": "Contact Us (Central Office)",
+      "phone": {
+        "ticket": "P :",
+        "number": " +1 253-863-8967"
+      },
+      "mail": {
+        "ticket": "M :",
+        "address": " contact@designo.co"
+      }
+    }
   }
 }
