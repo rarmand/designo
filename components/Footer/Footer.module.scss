@@ -43,4 +43,10 @@
   &__contactLink {
     color: $primary-color-100;
   }
+
+  &__socialMedia {
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+  }
 }

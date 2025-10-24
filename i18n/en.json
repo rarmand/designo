@@ -64,6 +64,13 @@
         "ticket": "M :",
         "address": " contact@designo.co"
       }
+    },
+    "socialMedia": {
+      "facebook": "Facebook account",
+      "youtube": "YouTube account",
+      "twitter": "Twiiter/X account",
+      "pinterest": "Pinterest account",
+      "instagram": "Instagram account"
     }
   }
 }

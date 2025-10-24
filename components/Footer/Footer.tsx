@@ -3,7 +3,13 @@ import styles from './Footer.module.scss';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-import logoLight from '@/public/header/logo-light.png';
+// images
+import companyLogo from '@/public/footer/logo-light.png';
+import facebookLogo from '@/public/footer/icon-facebook.svg';
+import instagramLogo from '@/public/footer/icon-instagram.svg';
+import twitterLogo from '@/public/footer/icon-twitter.svg';
+import youtubeLogo from '@/public/footer/icon-youtube.svg';
+import pinterestLogo from '@/public/footer/icon-pinterest.svg';
 
 type FooterProps = {};
 
@@ -12,7 +18,7 @@ const Footer = ({}: FooterProps) => {
 
   return (
     <footer className={styles.footer}>
-      <Image src={logoLight} alt={'logo'} width={200} height={27} priority />
+      <Image src={companyLogo} alt={'logo'} width={200} height={27} priority />
 
       <hr className={styles.footer__line} />
 
@@ -58,7 +64,13 @@ const Footer = ({}: FooterProps) => {
         </a>
       </address>
 
-      <div className={styles.footer__socialMedia}></div>
+      <nav className={styles.footer__socialMedia}>
+        <Link href=""><Image src={facebookLogo} alt={translator('socialMedia.facebook')} width={24} height={24} /></Link>
+        <Link href=""><Image src={youtubeLogo} alt={translator('socialMedia.youtube')} width={24} height={24} /></Link>
+        <Link href=""><Image src={twitterLogo} alt={translator('socialMedia.twitter')} width={24} height={24} /></Link>
+        <Link href=""><Image src={pinterestLogo} alt={translator('socialMedia.pinterest')} width={24} height={24} /></Link>
+        <Link href=""><Image src={instagramLogo} alt={translator('socialMedia.instagram')} width={24} height={24} /></Link>
+      </nav>
     </footer>
   );
 };
