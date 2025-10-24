@@ -11,7 +11,7 @@ const Footer = ({}: FooterProps) => {
   const translator = useTranslations('Footer');
 
   return (
-    <div className={styles.footer}>
+    <footer className={styles.footer}>
       <Image src={logoLight} alt={'logo'} width={200} height={27} priority />
 
       <hr className={styles.footer__line} />
@@ -40,7 +40,7 @@ const Footer = ({}: FooterProps) => {
         <p>M : contact@designo.co</p>
       </div>
       <div className={styles.footer__socialMedia}></div>
-    </div>
+    </footer>
   );
 };
 
