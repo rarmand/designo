@@ -1,6 +1,9 @@
-import Image from 'next/image';
+'use client';
+
 import styles from './Footer.module.scss';
+import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
 // images
@@ -11,28 +14,65 @@ import twitterLogo from '@/public/footer/icon-twitter.svg';
 import youtubeLogo from '@/public/footer/icon-youtube.svg';
 import pinterestLogo from '@/public/footer/icon-pinterest.svg';
 
-type FooterProps = {};
-
-const Footer = ({}: FooterProps) => {
+const Footer = () => {
   const translator = useTranslations('Footer');
+  const router = useRouter();
+
+  const locationsHref = '/locations';
+  const contactHref = '/contact';
+  const aboutHref = '/about';
+  const homeHref = '/home';
+
+  const youtubeUrl = 'https://www.youtube.com/';
+  const facebookUrl = 'https://www.facebook.com/';
+  const twitterUrl = 'https://x.com/';
+  const instagramUrl = 'https://www.instagram.com/';
+  const pinterestUrl = 'https://pinterest.com/';
+
+  const onLogoClick = () => router.push(homeHref);
 
   return (
     <footer className={styles.footer}>
-      <Image src={companyLogo} alt={'logo'} width={200} height={27} priority />
-
-      <hr className={styles.footer__line} />
-
       <nav className={styles.footer__menu}>
-        <Link className={styles.footer__link} href='/about'>
-          {translator('links.about')}
+        <button
+          className={styles.footer__button}
+          onClick={onLogoClick}
+          aria-label={translator('button')}
+          type='button'
+        >
+          <Image
+            src={companyLogo}
+            alt={translator('logo')}
+            width={200}
+            height={27}
+            priority
+          />
+        </button>
+
+        <hr className={styles.footer__line} />
+
+        <Link
+          aria-label={translator('links.about.label')}
+          className={styles.footer__link}
+          href={aboutHref}
+        >
+          {translator('links.about.name')}
         </Link>
 
-        <Link className={styles.footer__link} href='/locations'>
-          {translator('links.locations')}
+        <Link
+          aria-label={translator('links.locations.label')}
+          className={styles.footer__link}
+          href={locationsHref}
+        >
+          {translator('links.locations.name')}
         </Link>
 
-        <Link className={styles.footer__link} href='/contact'>
-          {translator('links.contact')}
+        <Link
+          aria-label={translator('links.contact.label')}
+          className={styles.footer__link}
+          href={contactHref}
+        >
+          {translator('links.contact.name')}
         </Link>
       </nav>
 
@@ -65,11 +105,46 @@ const Footer = ({}: FooterProps) => {
       </address>
 
       <nav className={styles.footer__socialMedia}>
-        <Link href=""><Image src={facebookLogo} alt={translator('socialMedia.facebook')} width={24} height={24} /></Link>
-        <Link href=""><Image src={youtubeLogo} alt={translator('socialMedia.youtube')} width={24} height={24} /></Link>
-        <Link href=""><Image src={twitterLogo} alt={translator('socialMedia.twitter')} width={24} height={24} /></Link>
-        <Link href=""><Image src={pinterestLogo} alt={translator('socialMedia.pinterest')} width={24} height={24} /></Link>
-        <Link href=""><Image src={instagramLogo} alt={translator('socialMedia.instagram')} width={24} height={24} /></Link>
+        <Link href={facebookUrl}>
+          <Image
+            src={facebookLogo}
+            alt={translator('socialMedia.facebook')}
+            width={24}
+            height={24}
+          />
+        </Link>
+        <Link href={youtubeUrl}>
+          <Image
+            src={youtubeLogo}
+            alt={translator('socialMedia.youtube')}
+            width={24}
+            height={24}
+          />
+        </Link>
+        <Link href={twitterUrl}>
+          <Image
+            src={twitterLogo}
+            alt={translator('socialMedia.twitter')}
+            width={24}
+            height={24}
+          />
+        </Link>
+        <Link href={pinterestUrl}>
+          <Image
+            src={pinterestLogo}
+            alt={translator('socialMedia.pinterest')}
+            width={24}
+            height={24}
+          />
+        </Link>
+        <Link href={instagramUrl}>
+          <Image
+            src={instagramLogo}
+            alt={translator('socialMedia.instagram')}
+            width={24}
+            height={24}
+          />
+        </Link>
       </nav>
     </footer>
   );

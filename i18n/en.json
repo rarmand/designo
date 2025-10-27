@@ -46,10 +46,20 @@
   },
   "Footer": {
     "links": {
-      "locations": "Locations",
-      "about": "Our company",
-      "contact": "Contact"
+      "locations": {
+        "name": "Locations",
+        "label": "Go to Locations page"
+      },
+      "about": {
+        "name": "Our company",
+        "label": "Go to About us page"
+      },
+      "contact": {
+        "name": "Contact",
+        "label": "Go to Contact page"
+      }
     },
+    "button": "Go to Home page",
     "logo": "Designo company's logo",
     "address": {
       "name": "Designo Central Office",
