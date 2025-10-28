@@ -10,7 +10,6 @@ import BlockLink from '@/components/BlockLink';
  * jak pisać style BEM dla rozbudowanych elementów?
  * sprawdzić jak zapisać rozmiary obrazków, czy w HTML czy w CSS, zeby nie byly problemowe
  * dodać aria-labels do wszystkich wymaganych elementów zgodnie z NOTES
- * rozdzielić NOTES na grupy, za duzo zamieszania
  * dodać prettier format na Ctrl Save
  *
  */

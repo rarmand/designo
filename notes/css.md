@@ -35,20 +35,38 @@ Needs to set `height` and `padding` to show the whole element in the background.
 Height must be calculated with a size of the background image.
 
 ---
+#### Inline styles for Next components Image and Link
 
-#### WRONG Relative image in header
+Inline styles mają wpływ na stylistykę komponentów `Image` i `Link`, w przeciwieństwie do CSS w `className`. Te nie zawsze mają wpływ na render elementu. W przypadku `<Image>` lepiej dodać styl poprzez inline, np.: `styles={{color: red}}`.
 
-To add an element:
+---
+
+#### Relative image in header
+
+To add an element (needed specified size of the image):
 
 ```
 <div className={styles.home__phoneImg}>
-  <Image src={phoneImg} alt='image hero phone' width={0} height={0} sizes='100vw' />
+  <Image
+    src={'/home/image-hero-phone.png'}
+    alt={translator('image')}
+    width={624}
+    height={913}
+    style={{
+      objectFit: 'cover',
+    }}
+  />
 </div>
 ```
 
-- brak jawnych rozmiarów: w=0, h=0; generowanie obrazka polega tylko na stylach CSS albo atrybucie `sizes` np. `sizes='100vw'`.
-- obraz jest generowany na podstawie rozmiaru okna.
-- `sizes='100vw'` - mówi, ze obraz ma zajmować 100% szerokości viewport, a `height: auto`
+CSS only for parent div:
+
+```
+  &__phoneImg {
+    position: relative;
+    bottom: 11rem;
+  }
+```
 
 ---
 
