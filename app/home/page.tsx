@@ -4,16 +4,6 @@ import Image from 'next/image';
 import ButtonLink from '@/components/ButtonLink';
 import BlockLink from '@/components/BlockLink';
 
-// images
-import phoneImg from '@/public/home/image-hero-phone.png';
-import passionateImg from '@/public/home/illustration-passionate.svg';
-import resourcefulImg from '@/public/home/illustration-resourceful.svg';
-import friendlyImg from '@/public/home/illustration-friendly.svg';
-
-// interface HomePageProps {
-//   params: {locale: string};
-// }
-
 /*
  * * * TODO:
  *
@@ -43,11 +33,13 @@ export default async function HomePage() {
 
         <div className={styles.home__phoneImg}>
           <Image
-            src={phoneImg}
+            src={'/home/image-hero-phone.png'}
             alt={translator('image')}
-            width={0}
-            height={0}
-            sizes='100vw'
+            width={624}
+            height={913}
+            style={{
+              objectFit: 'cover',
+            }}
           />
         </div>
       </section>
@@ -61,7 +53,7 @@ export default async function HomePage() {
       <section className={styles.home__principles}>
         <div className={styles.home__principle}>
           <Image
-            src={passionateImg}
+            src={'/home/illustration-passionate.svg'}
             alt={translator('principles.passionate.alt')}
             width={202}
             height={202}
@@ -75,7 +67,7 @@ export default async function HomePage() {
         </div>
         <div className={styles.home__principle}>
           <Image
-            src={resourcefulImg}
+            src={'/home/illustration-resourceful.svg'}
             alt={translator('principles.resourceful.alt')}
             width={202}
             height={202}
@@ -89,7 +81,7 @@ export default async function HomePage() {
         </div>
         <div className={styles.home__principle}>
           <Image
-            src={friendlyImg}
+            src={'/home/illustration-friendly.svg'}
             alt={translator('principles.friendly.alt')}
             width={202}
             height={202}
