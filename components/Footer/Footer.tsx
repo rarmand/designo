@@ -99,19 +99,39 @@ const Footer = () => {
       </address>
 
       <nav className={styles.footer__socialMedia}>
-        <Link href={facebookUrl} className={styles.footer__socialMedia__link}>
+        <Link
+          href={facebookUrl}
+          target='_blank'
+          className={styles.footer__socialMedia__link}
+        >
           <FacebookIconSvg alt={translator('socialMedia.facebook')} />
         </Link>
-        <Link href={youtubeUrl} className={styles.footer__socialMedia__link}>
+        <Link
+          href={youtubeUrl}
+          target='_blank'
+          className={styles.footer__socialMedia__link}
+        >
           <YoutubeIconSvg alt={translator('socialMedia.youtube')} />
         </Link>
-        <Link href={twitterUrl} className={styles.footer__socialMedia__link}>
+        <Link
+          href={twitterUrl}
+          target='_blank'
+          className={styles.footer__socialMedia__link}
+        >
           <TwitterIconSvg alt={translator('socialMedia.twitter')} />
         </Link>
-        <Link href={pinterestUrl} className={styles.footer__socialMedia__link}>
+        <Link
+          href={pinterestUrl}
+          target='_blank'
+          className={styles.footer__socialMedia__link}
+        >
           <PinterestIconSvg alt={translator('socialMedia.pinterest')} />
         </Link>
-        <Link href={instagramUrl} className={styles.footer__socialMedia__link}>
+        <Link
+          href={instagramUrl}
+          target='_blank'
+          className={styles.footer__socialMedia__link}
+        >
           <InstagramIconSvg alt={translator('socialMedia.instagram')} />
         </Link>
       </nav>
