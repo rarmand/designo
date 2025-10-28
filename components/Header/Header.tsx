@@ -48,9 +48,17 @@ export default function Header() {
           aria-controls='header-menu'
         >
           {open ? (
-            <IconMenuClose alt={translator('hamburger.close')} width={20} height={20} />
+            <IconMenuClose
+              alt={translator('hamburger.close')}
+              width={20}
+              height={20}
+            />
           ) : (
-            <IconMenu alt={translator('hamburger.menu')} width={20} height={20} />
+            <IconMenu
+              alt={translator('hamburger.menu')}
+              width={20}
+              height={20}
+            />
           )}
         </button>
       </div>

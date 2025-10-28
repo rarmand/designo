@@ -11,7 +11,6 @@ import BlockLink from '@/components/BlockLink';
  * sprawdzić jak zapisać rozmiary obrazków, czy w HTML czy w CSS, zeby nie byly problemowe
  * dodać aria-labels do wszystkich wymaganych elementów zgodnie z NOTES
  * rozdzielić NOTES na grupy, za duzo zamieszania
- * stworzyć ogólnie dostępny Footer
  * dodać prettier format na Ctrl Save
  *
  */
