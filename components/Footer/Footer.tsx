@@ -18,18 +18,13 @@ const Footer = () => {
   const translator = useTranslations('Footer');
   const router = useRouter();
 
-  const locationsHref = '/locations';
-  const contactHref = '/contact';
-  const aboutHref = '/about';
-  const homeHref = '/home';
-
   const youtubeUrl = 'https://www.youtube.com/';
   const facebookUrl = 'https://www.facebook.com/';
   const twitterUrl = 'https://x.com/';
   const instagramUrl = 'https://www.instagram.com/';
   const pinterestUrl = 'https://pinterest.com/';
 
-  const onLogoClick = () => router.push(homeHref);
+  const onLogoClick = () => router.push('/home');
 
   return (
     <footer className={styles.footer}>
@@ -41,7 +36,7 @@ const Footer = () => {
           type='button'
         >
           <Image
-            src={companyLogo}
+            src={'/footer/logo-light.png'}
             alt={translator('logo')}
             width={200}
             height={27}
@@ -54,7 +49,7 @@ const Footer = () => {
         <Link
           aria-label={translator('links.about.label')}
           className={styles.footer__link}
-          href={aboutHref}
+          href={'/about'}
         >
           {translator('links.about.name')}
         </Link>
@@ -62,7 +57,7 @@ const Footer = () => {
         <Link
           aria-label={translator('links.locations.label')}
           className={styles.footer__link}
-          href={locationsHref}
+          href={'/locations'}
         >
           {translator('links.locations.name')}
         </Link>
@@ -70,7 +65,7 @@ const Footer = () => {
         <Link
           aria-label={translator('links.contact.label')}
           className={styles.footer__link}
-          href={contactHref}
+          href={'/contact'}
         >
           {translator('links.contact.name')}
         </Link>
