@@ -7,10 +7,9 @@ import styles from './Header.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
-// images
-import logoDark from '@/public/header/logo-dark.png';
-import iconMenuOpen from '@/public/header/icon-hamburger.svg';
-import iconMenuClose from '@/public/header/icon-close.svg';
+// SVG objects
+import IconMenu from '@/assets/header/icon-hamburger.svg';
+import IconMenuClose from '@/assets/header/icon-close.svg';
 
 export default function Header() {
   // TODO: nadać RWD
@@ -22,10 +21,8 @@ export default function Header() {
   const onMenuButtonClick = () => setOpen(open => !open);
 
   /*
-  - zmiana kolorów svg i logo zaleznie od dark i light mode - doczytac jak to ma wygladac
   - jeszcze trzeba dodać cień na main gdy menu jest włączone
   - zastanowić się KIEDYŚ czy rozbijać to na mniejsze useable komponenty
-  - problemy z pobieraniem css z variables - jak to w koncu ma działać?
   */
   return (
     <header className={styles.header}>
@@ -36,7 +33,7 @@ export default function Header() {
           type='button'
         >
           <Image
-            src={logoDark}
+            src={'/header/logo-dark.png'}
             alt={translator('logo')}
             width={200}
             height={27}
@@ -50,12 +47,11 @@ export default function Header() {
           aria-expanded={open}
           aria-controls='header-menu'
         >
-          <Image
-            src={open ? iconMenuClose : iconMenuOpen}
-            alt={translator('hamburger')}
-            width={20}
-            height={20}
-          />
+          {open ? (
+            <IconMenuClose alt={translator('hamburger.close')} width={20} height={20} />
+          ) : (
+            <IconMenu alt={translator('hamburger.menu')} width={20} height={20} />
+          )}
         </button>
       </div>
 

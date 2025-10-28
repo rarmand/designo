@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
-import { Jost } from 'next/font/google';
-import '@/styles/globals.scss';
-import Header from '@/components/Header';
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
+import { Jost } from 'next/font/google';
+
+import '@/styles/globals.scss';
+import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const jost = Jost({

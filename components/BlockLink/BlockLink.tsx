@@ -5,8 +5,6 @@ import styles from './BlockLink.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import rightArrowIcon from '@/public/home/icon-right-arrow.svg';
-
 type BlockLinkProps = {
   name: string;
   route: 'graphic' | 'web' | 'app';
@@ -22,7 +20,7 @@ const BlockLink = ({ name, route }: BlockLinkProps) => {
       <p>
         {translator('subtitle')}
         <Image
-          src={rightArrowIcon}
+          src={'/home/icon-right-arrow.svg'}
           className={styles.blockLink__icon}
           alt={translator('icon')}
           width={4}
