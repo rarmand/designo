@@ -23,6 +23,7 @@
 
   &__menu {
     display: flex;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     row-gap: 32px;
@@ -33,6 +34,12 @@
     font-size: 14px;
     letter-spacing: 2px;
     text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
   }
 
   &__address {
@@ -47,11 +54,23 @@
 
   &__contactLink {
     color: $primary-color-100;
+    cursor: pointer;
   }
 
   &__socialMedia {
     display: flex;
     flex-direction: row;
     column-gap: 16px;
+
+    &__link {
+      & svg path {
+        fill: $primary-color-400;
+      }
+
+      &:hover svg path {
+        fill: $secondary-color-400;
+        transition-duration: 0.3s;
+      }
+    }
   }
 }

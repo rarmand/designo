@@ -6,13 +6,12 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 
-// images
-import companyLogo from '@/public/footer/logo-light.png';
-import facebookLogo from '@/public/footer/icon-facebook.svg';
-import instagramLogo from '@/public/footer/icon-instagram.svg';
-import twitterLogo from '@/public/footer/icon-twitter.svg';
-import youtubeLogo from '@/public/footer/icon-youtube.svg';
-import pinterestLogo from '@/public/footer/icon-pinterest.svg';
+// SVG objects
+import FacebookIconSvg from '@/assets/footer/icon-facebook.svg';
+import InstagramIconSvg from '@/assets/footer/icon-instagram.svg';
+import TwitterIconSvg from '@/assets/footer/icon-twitter.svg';
+import YoutubeIconSvg from '@/assets/footer/icon-youtube.svg';
+import PinterestIconSvg from '@/assets/footer/icon-pinterest.svg';
 
 const Footer = () => {
   const translator = useTranslations('Footer');
@@ -100,45 +99,20 @@ const Footer = () => {
       </address>
 
       <nav className={styles.footer__socialMedia}>
-        <Link href={facebookUrl}>
-          <Image
-            src={facebookLogo}
-            alt={translator('socialMedia.facebook')}
-            width={24}
-            height={24}
-          />
+        <Link href={facebookUrl} className={styles.footer__socialMedia__link}>
+          <FacebookIconSvg alt={translator('socialMedia.facebook')} />
         </Link>
-        <Link href={youtubeUrl}>
-          <Image
-            src={youtubeLogo}
-            alt={translator('socialMedia.youtube')}
-            width={24}
-            height={24}
-          />
+        <Link href={youtubeUrl} className={styles.footer__socialMedia__link}>
+          <YoutubeIconSvg alt={translator('socialMedia.youtube')} />
         </Link>
-        <Link href={twitterUrl}>
-          <Image
-            src={twitterLogo}
-            alt={translator('socialMedia.twitter')}
-            width={24}
-            height={24}
-          />
+        <Link href={twitterUrl} className={styles.footer__socialMedia__link}>
+          <TwitterIconSvg alt={translator('socialMedia.twitter')} />
         </Link>
-        <Link href={pinterestUrl}>
-          <Image
-            src={pinterestLogo}
-            alt={translator('socialMedia.pinterest')}
-            width={24}
-            height={24}
-          />
+        <Link href={pinterestUrl} className={styles.footer__socialMedia__link}>
+          <PinterestIconSvg alt={translator('socialMedia.pinterest')} />
         </Link>
-        <Link href={instagramUrl}>
-          <Image
-            src={instagramLogo}
-            alt={translator('socialMedia.instagram')}
-            width={24}
-            height={24}
-          />
+        <Link href={instagramUrl} className={styles.footer__socialMedia__link}>
+          <InstagramIconSvg alt={translator('socialMedia.instagram')} />
         </Link>
       </nav>
     </footer>
