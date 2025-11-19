@@ -9,11 +9,13 @@ const Overlay = () => {
 
   return (
     <div className={styles.overlay}>
-      <div className={styles.overlay__text}>
-        <h1 className={styles.overlay__title}>{translator('title')}</h1>
-        <p>{translator('description')}</p>
+      <div className={styles.overlay__content}>
+        <div className={styles.overlay__text}>
+          <h1 className={styles.overlay__title}>{translator('title')}</h1>
+          <p>{translator('description')}</p>
+        </div>
+        <ButtonLink route={'contact'} name={translator('button')}></ButtonLink>
       </div>
-      <ButtonLink route={'contact'} name={translator('button')}></ButtonLink>
     </div>
   );
 };
