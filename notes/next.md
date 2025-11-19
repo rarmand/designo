@@ -1,4 +1,4 @@
-#### Routing 
+#### Routing
 
 Routing depends on the side of the website.
 Different libs for client-side and server-side rendering. Another method for page routing, another for app routing.
@@ -62,4 +62,4 @@ Szczegóły ustawień:
 
 W Next.js folder `public` jest specjalnym katalogiem, z którego pliki są serwowane jako statyczne zasoby dostępne bezpośrednio pod ścieżką odpowiadającą ich lokalizacji w `public`. Oznacza to, że zamiast pisać pełną ścieżkę względną do `public`, ścieżka w URL zaczyna się prosto od folderu, np. `/header/picture.png`.
 
-```<Image src="/header/picture.png" alt="Picture" width={300} height={200} />```
+`<Image src="/header/picture.png" alt="Picture" width={300} height={200} />`

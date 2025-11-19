@@ -35,6 +35,7 @@ Needs to set `height` and `padding` to show the whole element in the background.
 Height must be calculated with a size of the background image.
 
 ---
+
 #### Inline styles for Next components Image and Link
 
 Inline styles mają wpływ na stylistykę komponentów `Image` i `Link`, w przeciwieństwie do CSS w `className`. Te nie zawsze mają wpływ na render elementu. W przypadku `<Image>` lepiej dodać styl poprzez inline, np.: `styles={{color: red}}`.

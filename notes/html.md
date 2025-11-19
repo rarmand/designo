@@ -32,7 +32,6 @@ Doczytać co to semantyka HTML, weryfikatory HTML (W3C Validator, ESLint), rozpo
 - accessibility
 - semantyka
 
-
 #### aria-labels
 
 Atrybuty `aria-label` służą do nadawania elementom HTML zrozumiałych nazw dla osób korzystających z technologii asystujących, takich jak czytniki ekranu. Pozwalają opisać cel przycisku, linku czy innego interaktywnego elementu, gdy nie wynika to jasno z widocznego tekstu albo gdy element (np. ikona) nie posiada jawnego opisu w DOM. Dzięki temu interfejs jest bardziej dostępny i przyjazny dla osób z niepełnosprawnościami.
