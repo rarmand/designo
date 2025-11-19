@@ -100,3 +100,24 @@ Przykładowe stylowanie (gdy SVG posiada `fill`):
 }
 
 ```
+
+---
+
+#### Background gradient
+
+> https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/gradient/linear-gradient
+
+Used divided background:
+
+```
+background: linear-gradient(
+    to top,
+    $primary-color-900 0%,
+    $primary-color-900 50%,
+    $primary-color-100 50%,
+    $primary-color-100 100%
+  );
+  width: 100%;
+```
+
+Counts from the bottom to top. Lower black color to 50% of the height, next white color from 50% to 100%.
