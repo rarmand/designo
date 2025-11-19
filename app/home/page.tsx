@@ -12,6 +12,10 @@ import BlockLink from '@/components/BlockLink';
  * dodać aria-labels do wszystkich wymaganych elementów zgodnie z NOTES
  * dodać prettier format na Ctrl Save
  *
+ * połaczyć Overlay z Footer jako jedno
+ * dodać obrazek do tla Overlay
+ * zacząć pisać testy dla components
+ * 
  */
 
 export default async function HomePage() {
