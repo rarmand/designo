@@ -11,6 +11,9 @@ import BlockLink from '@/components/BlockLink';
  * sprawdzić jak zapisać rozmiary obrazków, czy w HTML czy w CSS, zeby nie byly problemowe
  * dodać aria-labels do wszystkich wymaganych elementów zgodnie z NOTES
  * dodać prettier format na Ctrl Save
+ * zainstalować lib do testowania, poczytać o narzędziach do testowania
+ * poczytać o podejściu do testowania
+ * 
  * 
   1.  Podział Home Page na mniejsze komponenty
 	2.	Dobre testy tych komponentów
