@@ -12,7 +12,6 @@ import BlockLink from '@/components/BlockLink';
  * dodać aria-labels do wszystkich wymaganych elementów zgodnie z NOTES
  * dodać prettier format na Ctrl Save
  *
- * połaczyć Overlay z Footer jako jedno
  * zacząć pisać testy dla components
  *
  */
@@ -22,6 +21,7 @@ export default async function HomePage() {
 
   return (
     <main className={styles.home}>
+      {/*here*/}  
       <section className={styles.home__header}>
         <div className={styles.home__introduction}>
           <div className={styles.home__text}>
@@ -45,13 +45,17 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/*here*/}  
       <section className={styles.home__designs}>
         <BlockLink name={translator('designs.web')} route='web' />
         <BlockLink name={translator('designs.app')} route='app' />
         <BlockLink name={translator('designs.graphic')} route='graphic' />
       </section>
 
+      {/*here*/}  
       <section className={styles.home__principles}>
+                  
+        {/*here*/}
         <div className={styles.home__principle}>
           <div className={styles.home__principleImage}>
             <div className={styles.home__principleBackgroundImage} />
@@ -71,6 +75,8 @@ export default async function HomePage() {
             <p>{translator('principles.passionate.description')}</p>
           </div>
         </div>
+
+        {/*here*/}
         <div className={styles.home__principle}>
           <div className={styles.home__principleImage}>
             <div className={styles.home__principleBackgroundImage} />
@@ -90,6 +96,8 @@ export default async function HomePage() {
             <p>{translator('principles.resourceful.description')}</p>
           </div>
         </div>
+
+        {/*here*/}
         <div className={styles.home__principle}>
           <div className={styles.home__principleImage}>
             <div className={styles.home__principleBackgroundImage} />
