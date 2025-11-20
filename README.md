@@ -10,7 +10,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Tailwind CSS
+- SASS with BEM 
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 
@@ -30,18 +30,50 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Development Roadmap
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project follows a mobile-first approach for building a responsive and scalable web application. The development process is planned with the following key steps:
 
-## Learn More
+### What is done?
 
-To learn more about Next.js, take a look at the following resources:
+1. Font **Jost** added via Google Fonts.
+2. Internationalization.
+3. App Routing.
+4. Prepared project structure of files and folders.
+5. SASS with CSS Modules and BEM.
+6. Prettier.
+7. Separated **notes** folder to save observations and conclusions.
+8. Components divided to client-side group and server-side group.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Components ready-to-use:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All in version for mobile.
+
+- HomePage
+- Header
+- Footer
+- Overlay
+- BlockLink
+- ButtonLink
+
+### Next Steps
+
+1. Component Modularization
+
+The current Home Page has been developed as a single view and will be refactored into smaller, reusable React components. This modularization improves code readability, maintainability, and enables easier feature additions or modifications in the future.
+
+2. Testing
+
+Once components are split, unit and integration tests will be added using Jest and React Testing Library to ensure component stability and regression prevention. Writing tests early ensures higher confidence when refactoring or extending the project.
+
+3. Responsive Design Implementation
+
+After having modular and tested components, responsive styles will be developed to support tablet and desktop screen sizes in addition to mobile. The project uses a mobile-first CSS approach to progressively enhance layouts for larger devices.
+
+4. Styling Approach Considerations
+
+Currently using BEM methodology with CSS Modules for styles, but exploring the option to migrate to Tailwind CSS for faster styling and utility-first approach. This migration would be considered only after stabilizing the existing codebase and test coverage.
+
 
 ## Deploy on Vercel
 
