@@ -84,6 +84,35 @@
     row-gap: 32px;
   }
 
+  &__principleImage {
+    position: relative;
+    width: 202px;
+    height: 202px;
+  }
+
+  &__principleBackgroundImage {
+    position: absolute;
+    inset: 0;
+    background-image: url('/home/bg-pattern-small-circle.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: -1;
+  }
+
+  &__principle:nth-child(2) &__principleBackgroundImage {
+    transform: rotate(-90deg);
+  }
+
+  &__principle:nth-child(3) &__principleBackgroundImage {
+    transform: rotate(90deg);
+  }
+
+  &__principleForegroundImage {
+    position: relative;
+    z-index: 1;
+  }
+
   &__principleName {
     text-transform: uppercase;
   }

@@ -13,9 +13,8 @@ import BlockLink from '@/components/BlockLink';
  * dodać prettier format na Ctrl Save
  *
  * połaczyć Overlay z Footer jako jedno
- * dodać obrazek do tla Overlay
  * zacząć pisać testy dla components
- * 
+ *
  */
 
 export default async function HomePage() {
@@ -54,12 +53,17 @@ export default async function HomePage() {
 
       <section className={styles.home__principles}>
         <div className={styles.home__principle}>
-          <Image
-            src={'/home/illustration-passionate.svg'}
-            alt={translator('principles.passionate.alt')}
-            width={202}
-            height={202}
-          ></Image>
+          <div className={styles.home__principleImage}>
+            <div className={styles.home__principleBackgroundImage} />
+
+            <Image
+              src={'/home/illustration-passionate.svg'}
+              alt={translator('principles.passionate.alt')}
+              fill
+              className={styles.principleForegroundImage}
+            />
+          </div>
+
           <div className={styles.home__principleDescription}>
             <h3 className={styles.home__principleName}>
               {translator('principles.passionate.name')}
@@ -68,12 +72,17 @@ export default async function HomePage() {
           </div>
         </div>
         <div className={styles.home__principle}>
-          <Image
-            src={'/home/illustration-resourceful.svg'}
-            alt={translator('principles.resourceful.alt')}
-            width={202}
-            height={202}
-          ></Image>
+          <div className={styles.home__principleImage}>
+            <div className={styles.home__principleBackgroundImage} />
+
+            <Image
+              src={'/home/illustration-resourceful.svg'}
+              alt={translator('principles.resourceful.alt')}
+              fill
+              className={styles.principleForegroundImage}
+            />
+          </div>
+
           <div className={styles.home__principleDescription}>
             <h3 className={styles.home__principleName}>
               {translator('principles.resourceful.name')}
@@ -82,12 +91,17 @@ export default async function HomePage() {
           </div>
         </div>
         <div className={styles.home__principle}>
-          <Image
-            src={'/home/illustration-friendly.svg'}
-            alt={translator('principles.friendly.alt')}
-            width={202}
-            height={202}
-          ></Image>
+          <div className={styles.home__principleImage}>
+            <div className={styles.home__principleBackgroundImage} />
+
+            <Image
+              src={'/home/illustration-friendly.svg'}
+              alt={translator('principles.friendly.alt')}
+              fill
+              className={styles.principleForegroundImage}
+            />
+          </div>
+
           <div className={styles.home__principleDescription}>
             <h3 className={styles.home__principleName}>
               {translator('principles.friendly.name')}
