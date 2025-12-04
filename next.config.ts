@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
       @use "styles/variables.scss" as *;
     `,
   },
-  webpack(config) {
+  webpack(config: { module: { rules: any[] } }) {
     // Znajdź istniejącą regułę loadera dla plików SVG
     const fileLoaderRule = config.module.rules.find((rule: any) =>
       rule.test?.test?.('.svg')
