@@ -1,6 +1,6 @@
-@use "../../styles/variables" as *;
+@use '../../styles/variables' as *;
 
-.overlay {
+.overlayContainer {
   background: linear-gradient(
     to top,
     $primary-color-900 0%,
@@ -9,32 +9,32 @@
     $primary-color-100 100%
   );
   width: 100%;
+}
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
-    background-color: $primary-color-400;
-    background-image: url('/footer/bg-pattern-call-to-action.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+  background-color: $primary-color-400;
+  background-image: url('/footer/bg-pattern-call-to-action.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 
-    color: $primary-color-100;
-    margin: 0 1.5rem;
-    padding: 4.5rem 1.5rem;
-    border-radius: 8px;
-  }
+  color: $primary-color-100;
+  margin: 0 1.5rem;
+  padding: 4.5rem 1.5rem;
+  border-radius: 8px;
+}
 
-  &__text {
-    display: flex;
-    flex-direction: column;
-    row-gap: 12px;
-    margin-bottom: 32px;
-  }
+.content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  margin-bottom: 32px;
+}
 
-  &__title {
-    color: $primary-color-100;
-  }
+.title {
+  color: $primary-color-100;
 }
