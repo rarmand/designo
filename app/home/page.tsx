@@ -30,7 +30,7 @@ export default async function HomePage() {
 
   return (
     <main className={styles.home}>
-      {/*here*/}  
+      {/*here*/}
       <section className={styles.home__header}>
         <div className={styles.home__introduction}>
           <div className={styles.home__text}>
@@ -54,16 +54,15 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/*here*/}  
+      {/*here*/}
       <section className={styles.home__designs}>
         <BlockLink name={translator('designs.web')} route='web' />
         <BlockLink name={translator('designs.app')} route='app' />
         <BlockLink name={translator('designs.graphic')} route='graphic' />
       </section>
 
-      {/*here*/}  
+      {/*here*/}
       <section className={styles.home__principles}>
-                  
         {/*here*/}
         <div className={styles.home__principle}>
           <div className={styles.home__principleImage}>

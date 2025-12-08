@@ -3,12 +3,6 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
   /* config options here */
-  sassOptions: {
-    additionalData: `$var: red;`,
-    prependData: `
-      @use "styles/variables.scss" as *;
-    `,
-  },
   webpack(config: { module: { rules: any[] } }) {
     // Znajdź istniejącą regułę loadera dla plików SVG
     const fileLoaderRule = config.module.rules.find((rule: any) =>

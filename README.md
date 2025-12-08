@@ -10,7 +10,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 - Semantic HTML5 markup
 - CSS custom properties
-- SASS with BEM 
+- SASS with BEM
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
 
@@ -73,7 +73,6 @@ After having modular and tested components, responsive styles will be developed 
 4. Styling Approach Considerations
 
 Currently using BEM methodology with CSS Modules for styles, but exploring the option to migrate to Tailwind CSS for faster styling and utility-first approach. This migration would be considered only after stabilizing the existing codebase and test coverage.
-
 
 ## Deploy on Vercel
 
