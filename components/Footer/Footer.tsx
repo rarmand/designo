@@ -27,9 +27,9 @@ const Footer = () => {
 
   return (
     <footer className={styles.footer}>
-      <nav className={styles.footer__menu}>
+      <nav className={styles.menu}>
         <button
-          className={styles.footer__button}
+          className={styles.footerLogo}
           onClick={onLogoClick}
           aria-label={translator('button')}
           type='button'
@@ -43,11 +43,11 @@ const Footer = () => {
           />
         </button>
 
-        <hr className={styles.footer__line} />
+        <hr className={styles.divider} />
 
         <Link
           aria-label={translator('links.about.label')}
-          className={styles.footer__link}
+          className={styles.menuLink}
           href={'/about'}
         >
           {translator('links.about.name')}
@@ -55,7 +55,7 @@ const Footer = () => {
 
         <Link
           aria-label={translator('links.locations.label')}
-          className={styles.footer__link}
+          className={styles.menuLink}
           href={'/locations'}
         >
           {translator('links.locations.name')}
@@ -63,14 +63,14 @@ const Footer = () => {
 
         <Link
           aria-label={translator('links.contact.label')}
-          className={styles.footer__link}
+          className={styles.menuLink}
           href={'/contact'}
         >
           {translator('links.contact.name')}
         </Link>
       </nav>
 
-      <address className={styles.footer__address}>
+      <address className={styles.address}>
         {translator('address.name')}
         <br />
         {translator('address.street')}
@@ -78,12 +78,12 @@ const Footer = () => {
         {translator('address.city')}
       </address>
 
-      <address className={styles.footer__address}>
+      <address className={styles.address}>
         {translator('address.contact')}
         <br />
         <a
           href={`tel:${translator('address.phone.number')}`}
-          className={styles.footer__contactLink}
+          className={styles.contactLink}
         >
           {translator('address.phone.ticket')}
           {translator('address.phone.number')}
@@ -91,46 +91,46 @@ const Footer = () => {
         <br />
         <a
           href={`mailto:${translator('address.mail.address')}`}
-          className={styles.footer__contactLink}
+          className={styles.contactLink}
         >
           {translator('address.mail.ticket')}
           {translator('address.mail.address')}
         </a>
       </address>
 
-      <nav className={styles.footer__socialMedia}>
+      <nav className={styles.socialMedia}>
         <Link
           href={facebookUrl}
           target='_blank'
-          className={styles.footer__socialMedia__link}
+          className={styles.socialMediaLink}
         >
           <FacebookIconSvg alt={translator('socialMedia.facebook')} />
         </Link>
         <Link
           href={youtubeUrl}
           target='_blank'
-          className={styles.footer__socialMedia__link}
+          className={styles.socialMediaLink}
         >
           <YoutubeIconSvg alt={translator('socialMedia.youtube')} />
         </Link>
         <Link
           href={twitterUrl}
           target='_blank'
-          className={styles.footer__socialMedia__link}
+          className={styles.socialMediaLink}
         >
           <TwitterIconSvg alt={translator('socialMedia.twitter')} />
         </Link>
         <Link
           href={pinterestUrl}
           target='_blank'
-          className={styles.footer__socialMedia__link}
+          className={styles.socialMediaLink}
         >
           <PinterestIconSvg alt={translator('socialMedia.pinterest')} />
         </Link>
         <Link
           href={instagramUrl}
           target='_blank'
-          className={styles.footer__socialMedia__link}
+          className={styles.socialMediaLink}
         >
           <InstagramIconSvg alt={translator('socialMedia.instagram')} />
         </Link>

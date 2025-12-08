@@ -1,78 +1,82 @@
-@use "../../styles/variables" as *;
+@use '../../styles/variables' as *;
 
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 40px;
+  row-gap: 40px; // to fix
   padding: 4rem 1.5rem;
 
   background-color: $primary-color-900;
   color: $primary-color-100;
   width: 100%;
+}
 
-  &__button {
-    background-color: inherit;
-    border: none;
+.footerLogo {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.divider {
+  width: 100%;
+  background-color: $tertiary-color-900;
+  border: none;
+  height: 0.5px;
+}
+
+.menu {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 32px;
+}
+
+.menuLink {
+  color: $primary-color-100;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.address {
+  text-align: center;
+  font-style: normal;
+  opacity: 0.49;
+
+  &::first-line {
+    font-weight: 700;
+  }
+}
+
+.contactLink {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: row;
+  column-gap: 16px;
+}
+
+.socialMediaLink {
+  & svg path {
+    fill: $primary-color-400;
   }
 
-  &__line {
-    width: 100%;
-    background-color: $tertiary-color-900;
-    border: none;
-    height: 0.5px;
-  }
-
-  &__menu {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 32px;
-  }
-
-  &__link {
-    color: $primary-color-100;
-    font-size: 14px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-  }
-
-  &__address {
-    text-align: center;
-    font-style: normal;
-    opacity: 49%;
-
-    &::first-line {
-      font-weight: 700;
-    }
-  }
-
-  &__contactLink {
-    color: $primary-color-100;
-    cursor: pointer;
-  }
-
-  &__socialMedia {
-    display: flex;
-    flex-direction: row;
-    column-gap: 16px;
-
-    &__link {
-      & svg path {
-        fill: $primary-color-400;
-      }
-
-      &:hover svg path {
-        fill: $secondary-color-400;
-        transition-duration: 0.3s;
-      }
-    }
+  &:hover svg path {
+    fill: $secondary-color-400;
+    transition-duration: 0.3s;
   }
 }

@@ -26,9 +26,9 @@ export default function Header() {
   */
   return (
     <header className={styles.header}>
-      <div className={styles.header__main}>
+      <div className={styles.content}>
         <button
-          className={styles.header__button}
+          className={styles.headerButton}
           onClick={onLogoClick}
           type='button'
         >
@@ -41,7 +41,7 @@ export default function Header() {
           />
         </button>
         <button
-          className={styles.header__button}
+          className={styles.headerButton}
           onClick={onMenuButtonClick}
           type='button'
           aria-expanded={open}
@@ -64,9 +64,9 @@ export default function Header() {
       </div>
 
       {open && (
-        <nav id='header-menu' className={styles.header__menu}>
+        <nav id='header-menu' className={styles.menu}>
           <Link
-            className={styles.header__link}
+            className={styles.menuLink}
             href='/about'
             onClick={onMenuButtonClick}
           >
@@ -74,7 +74,7 @@ export default function Header() {
           </Link>
 
           <Link
-            className={styles.header__link}
+            className={styles.menuLink}
             href='/locations'
             onClick={onMenuButtonClick}
           >
@@ -82,7 +82,7 @@ export default function Header() {
           </Link>
 
           <Link
-            className={styles.header__link}
+            className={styles.menuLink}
             href='/contact'
             onClick={onMenuButtonClick}
           >

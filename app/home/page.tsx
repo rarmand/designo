@@ -10,7 +10,6 @@ import BlockLink from '@/components/BlockLink';
  * jak pisać style BEM dla rozbudowanych elementów?
  * sprawdzić jak zapisać rozmiary obrazków, czy w HTML czy w CSS, zeby nie byly problemowe
  * dodać aria-labels do wszystkich wymaganych elementów zgodnie z NOTES
- * dodać prettier format na Ctrl Save
  * zainstalować lib do testowania, poczytać o narzędziach do testowania
  * poczytać o podejściu do testowania
  * 
@@ -20,7 +19,6 @@ import BlockLink from '@/components/BlockLink';
   3.  Podział Header i Footer na mniejsze komponenty
   4.  Testowanie komponentów.
 	5.	Rozszerzenie responsywności na tablet i desktop
-	6.	Przejście do Tailwind CSS - optional
  * 
  *
  */
