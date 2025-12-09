@@ -1,55 +1,7 @@
-@use '../../styles/variables' as *;
-
 .home {
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 120px;
   margin-bottom: 120px;
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-
-  height: calc(640px + 12rem);
-  width: 100%;
-
-  background-image: url('/home/bg-pattern-hero-home.svg');
-  background-size: 640px 640px;
-  background-repeat: no-repeat;
-  background-position: 0 100px;
-  padding: 0 1rem;
-  background-color: $primary-color-400;
-
-  overflow: hidden;
-}
-
-.introduction {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5rem 0;
-  gap: 24px;
-  color: $primary-color-100;
-  font-size: 15px;
-  z-index: 1;
-}
-
-.text {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.title {
-  color: $primary-color-100;
-  font-size: 32px;
-}
-
-.phoneImg {
-  position: relative;
-  bottom: 11rem;
 }
