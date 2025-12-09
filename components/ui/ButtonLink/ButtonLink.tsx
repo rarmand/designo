@@ -11,7 +11,6 @@ type ButtonLinkProps = {
 };
 
 // TODO: dodac testy
-// TODO: poprawic BEM names
 // function takes props
 const ButtonLink = ({ name, variant = 'primary', route }: ButtonLinkProps) => {
   const variantClass = `${styles.buttonLink} ${styles[`buttonLink--${variant}`]}`;
