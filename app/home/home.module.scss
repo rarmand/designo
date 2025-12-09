@@ -1,4 +1,4 @@
-@use "../../styles/variables" as *;
+@use '../../styles/variables' as *;
 
 .home {
   display: flex;
@@ -6,116 +6,50 @@
   align-items: center;
   row-gap: 120px;
   margin-bottom: 120px;
+}
 
-  &__header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
-    height: calc(640px + 12rem);
-    width: 100%;
+  height: calc(640px + 12rem);
+  width: 100%;
 
-    background-image: url('/home/bg-pattern-hero-home.svg');
-    background-size: 640px 640px;
-    background-repeat: no-repeat;
-    background-position: 0 100px;
-    padding: 0 1rem;
-    background-color: $primary-color-400;
+  background-image: url('/home/bg-pattern-hero-home.svg');
+  background-size: 640px 640px;
+  background-repeat: no-repeat;
+  background-position: 0 100px;
+  padding: 0 1rem;
+  background-color: $primary-color-400;
 
-    overflow: hidden;
-  }
+  overflow: hidden;
+}
 
-  &__introduction {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5rem 0;
-    gap: 24px;
-    color: $primary-color-100;
-    font-size: 15px;
-    z-index: 1;
-  }
+.introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+  gap: 24px;
+  color: $primary-color-100;
+  font-size: 15px;
+  z-index: 1;
+}
 
-  &__text {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
 
-  &__title {
-    color: $primary-color-100;
-    font-size: 32px;
-  }
+.title {
+  color: $primary-color-100;
+  font-size: 32px;
+}
 
-  &__phoneImg {
-    position: relative;
-    bottom: 11rem;
-  }
-
-  &__designs {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    row-gap: 24px;
-    padding: 0 1.5rem;
-  }
-
-  &__principles {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0 1rem;
-    row-gap: 80px;
-  }
-
-  &__principle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    row-gap: 48px;
-  }
-
-  &__principleDescription {
-    display: flex;
-    flex-direction: column;
-    row-gap: 32px;
-  }
-
-  &__principleImage {
-    position: relative;
-    width: 202px;
-    height: 202px;
-  }
-
-  &__principleBackgroundImage {
-    position: absolute;
-    inset: 0;
-    background-image: url('/home/bg-pattern-small-circle.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    z-index: -1;
-  }
-
-  &__principle:nth-child(2) &__principleBackgroundImage {
-    transform: rotate(-90deg);
-  }
-
-  &__principle:nth-child(3) &__principleBackgroundImage {
-    transform: rotate(90deg);
-  }
-
-  &__principleForegroundImage {
-    position: relative;
-    z-index: 1;
-  }
-
-  &__principleName {
-    text-transform: uppercase;
-  }
+.phoneImg {
+  position: relative;
+  bottom: 11rem;
 }
