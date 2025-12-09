@@ -20,16 +20,18 @@
     }
   },
   "HomePage": {
-    "title": "Award-winning custom designs and digital branding solutions",
-    "description": "With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.",
-    "button": "Learn more",
-    "image": "Phone image",
-    "designs": {
+    "Hero": {
+      "title": "Award-winning custom designs and digital branding solutions",
+      "description": "With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.",
+      "button": "Learn more",
+      "image": "Phone image"
+    },
+    "Designs": {
       "web": "Web Design",
       "app": "App Design",
       "graphic": "Graphic Design"
     },
-    "principles": {
+    "Principles": {
       "passionate": {
         "name": "Passionate",
         "alt": "Passionate image",
