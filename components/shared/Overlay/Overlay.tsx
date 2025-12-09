@@ -1,10 +1,9 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import ButtonLink from '../ButtonLink';
+import ButtonLink from '../../ui/ButtonLink';
 import styles from './Overlay.module.scss';
 
-// TODO: check if additional div is needed
 const Overlay = () => {
   const translator = useTranslations('Overlay');
 

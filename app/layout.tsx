@@ -4,9 +4,9 @@ import { getTranslations } from 'next-intl/server';
 import { Jost } from 'next/font/google';
 
 import '@/styles/globals.scss';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import Overlay from '@/components/Overlay';
+import Header from '@/components/shared/Header';
+import Footer from '@/components/shared/Footer';
+import Overlay from '@/components/shared/Overlay';
 
 const jost = Jost({
   subsets: ['latin'],
