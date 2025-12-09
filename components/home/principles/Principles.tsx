@@ -2,6 +2,8 @@ import styles from './Principles.module.scss';
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
+// TODO: exclude one principle? is it possible?
+
 async function Principles() {
   const translator = await getTranslations('HomePage.Principles');
 
