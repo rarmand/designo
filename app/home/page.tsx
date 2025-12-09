@@ -12,7 +12,6 @@ import Hero from '@/components/home/hero';
  * poczytać o podejściu do testowania
  * 
  * 
-  1.  Podział Home Page na mniejsze komponenty
 	2.	Dobre testy tych komponentów
   3.  Podział Header i Footer na mniejsze komponenty
   4.  Testowanie komponentów.

@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
 async function Principles() {
-  const translator = await getTranslations('HomePage.principles');
+  const translator = await getTranslations('HomePage.Principles');
 
   return (
     <section className={styles.principles}>

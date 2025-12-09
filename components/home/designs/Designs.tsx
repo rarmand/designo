@@ -3,7 +3,7 @@ import styles from './Designs.module.scss';
 import { getTranslations } from 'next-intl/server';
 
 async function Designs() {
-  const translator = await getTranslations('HomePage.designs');
+  const translator = await getTranslations('HomePage.Designs');
 
   return (
     <section className={styles.designs}>
