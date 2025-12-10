@@ -1,7 +1,7 @@
 import styles from './Home.module.scss';
-import Designs from '@/components/home/designs';
-import Principles from '@/components/home/principles';
-import Hero from '@/components/home/hero';
+import Designs from '@/components/home/Designs';
+import Principles from '@/components/home/Principles';
+import Hero from '@/components/home/Hero';
 
 /*
  * * * TODO:
