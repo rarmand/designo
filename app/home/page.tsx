@@ -10,12 +10,11 @@ import Hero from '@/components/home/Hero';
  * dodać aria-labels do wszystkich wymaganych elementów zgodnie z NOTES
  * zainstalować lib do testowania, poczytać o narzędziach do testowania
  * poczytać o podejściu do testowania
+ * ustawić wszystkie size PX na REM 
  * 
- * 
-	2.	Dobre testy tych komponentów
+ 	1.	Rozszerzenie responsywności na tablet i desktop
+  2.  Testowanie komponentów.
   3.  Podział Header i Footer na mniejsze komponenty
-  4.  Testowanie komponentów.
-	5.	Rozszerzenie responsywności na tablet i desktop
  * 
  *
  */
