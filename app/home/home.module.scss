@@ -1,7 +1,15 @@
+@use '../../styles/variables.scss' as *;
+
 .home {
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 120px;
   margin-bottom: 120px;
+
+  @include tablet {
+  }
+
+  @include desktop {
+  }
 }
