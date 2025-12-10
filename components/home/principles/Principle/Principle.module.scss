@@ -1,0 +1,46 @@
+.principle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: 48px;
+}
+
+.image {
+  position: relative;
+  width: 202px;
+  height: 202px;
+}
+
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  background-image: url('/home/bg-pattern-small-circle.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: -1;
+}
+
+.resourcefulBackgroundImageTransform {
+  transform: rotate(-90deg);
+}
+
+.friendlyBackgroundImageTransform {
+  transform: rotate(90deg);
+}
+
+.foregroundImage {
+  position: relative;
+  z-index: 1;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.name {
+  text-transform: uppercase;
+}
