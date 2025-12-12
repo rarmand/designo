@@ -20,14 +20,12 @@ $bp-desktop: 1024px;
 
 @mixin tablet {
   @media (min-width: $bp-tablet) and (max-width: ($bp-desktop - 1)) {
-    margin: 0 3rem;
     @content;
   }
 }
 
 @mixin desktop {
   @media (min-width: $bp-desktop) {
-    margin: 0 9rem;
     @content;
   }
 }
