@@ -12,11 +12,27 @@
   background-image: url('/home/bg-pattern-hero-home.svg');
   background-size: 640px 640px;
   background-repeat: no-repeat;
-  background-position: 0 100px;
-  padding: 0 1rem;
+  background-position-x: left;
+  background-position-y: 6rem;
   background-color: $primary-color-400;
 
   overflow: hidden;
+
+  @include tablet {
+    background-position-x: 15rem;
+    background-position-y: 6rem;
+    border-radius: 15px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    align-items: flex-start;
+
+    height: 640px;
+    background-position-x: right;
+    background-position-y: center;
+    border-radius: 15px;
+  }
 }
 
 .container {
