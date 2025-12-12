@@ -3,6 +3,11 @@ import Image from 'next/image';
 import ButtonLink from '@/components/ui/ButtonLink';
 import styles from './Hero.module.scss';
 
+/*
+TODO:
+- sprawdzic space between tekstu hero
+- ustawić phoneImg dla wszystkich rozdzielczości
+*/
 async function Hero() {
   const translator = await getTranslations('HomePage.Hero');
 
