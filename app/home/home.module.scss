@@ -4,14 +4,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-self: center;
   row-gap: 120px;
   margin-bottom: 120px;
+  width: 100%;
 
   @include tablet {
-    margin: 0 3rem;
+    padding: 0 3rem;
   }
 
   @include desktop {
-    margin: 0 9rem;
+    padding: 0 9rem;
+    row-gap: 160px;
   }
 }
