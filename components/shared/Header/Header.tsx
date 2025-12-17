@@ -11,9 +11,8 @@ import Link from 'next/link';
 import IconMenu from '@/assets/header/icon-hamburger.svg';
 import IconMenuClose from '@/assets/header/icon-close.svg';
 
+// TODO: dodać menu dla tablet i desktop
 export default function Header() {
-  // TODO: nadać RWD
-  // BEM - block element modifier
   const [open, setOpen] = useState(false);
   const router = useRouter();
   const translator = useTranslations('Header');
