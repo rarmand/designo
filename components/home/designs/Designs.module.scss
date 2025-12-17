@@ -1,3 +1,5 @@
+@use '../../../styles/variables' as *;
+
 .designs {
   display: flex;
   width: 100%;
@@ -5,5 +7,31 @@
   align-items: center;
   text-align: center;
   row-gap: 24px;
-  padding: 0 1.5rem;
+  padding: 0; //0 1.5rem;
+
+  @include tablet {
+    row-gap: 25px;
+  }
+
+  @include desktop {
+    height: 640px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      'design1 design2'
+      'design1 design3';
+    column-gap: 30px;
+    row-gap: 24px;
+
+    & > *:nth-child(1) {
+      grid-area: design1;
+    }
+    & > *:nth-child(2) {
+      grid-area: design2;
+    }
+    & > *:nth-child(3) {
+      grid-area: design3;
+    }
+  }
 }

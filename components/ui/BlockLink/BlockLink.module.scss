@@ -25,6 +25,12 @@
     color: $primary-color-100;
     transition-duration: 0.3s;
   }
+  @include tablet {
+    height: 200px;
+  }
+  @include desktop {
+    height: 100%;
+  }
 }
 
 .title {
