@@ -49,13 +49,18 @@
   padding: 4.5rem 1.5rem;
 
   @include tablet {
+    padding: 4rem 6rem;
     margin: 0 3rem;
     border-radius: 15px;
   }
 
   @include desktop {
+    padding: 4rem 6rem;
     margin: 0 9rem;
     border-radius: 15px;
+
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -64,6 +69,12 @@
   flex-direction: column;
   row-gap: 12px;
   margin-bottom: 32px;
+
+  @include desktop {
+    align-items: flex-start;
+    text-align: left;
+    width: 50%;
+  }
 }
 
 .title {
